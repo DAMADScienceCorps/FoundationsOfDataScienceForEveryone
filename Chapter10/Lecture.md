@@ -1,6 +1,4 @@
-## Generative Neural Networks
-
-### Learning Questions {#learning-questions-8 .unnumbered}
+# Learning Questions
 
 -   What is the difference between an inferential and generative neural
     network?
@@ -21,7 +19,7 @@
 
 -   What is a large language model?
 
-### Introduction {#introduction-8 .unnumbered}
+# Introduction
 
 In the last lesson, we explored inferential neural networks, models that
 make predictions from data. For example, a neural network can be trained
@@ -39,7 +37,7 @@ Generative models can produce images, text, music and video that appear
 human-made. This is its greatest strength, but it also presents the
 greatest dilemma, which we will discuss at the end of the lesson.
 
-### Autoencoders {#autoencoders .unnumbered}
+# Autoencoders
 
 An **autoencoder** is a neural network that learns to reconstruct its
 input. It consists of two components: an encoder and a decoder, which
@@ -63,8 +61,7 @@ the width of each line, the orientation, etc.
 an example architecture diagram of an autoencoder.
 
 ![An example (variational) autoencoder architecture. Image credit:
-EugenioTL (Wikipedia)](figures_pedagogy/VAE_Basic.png){#fig:vae
-width="100%"}
+EugenioTL (Wikipedia)](../figures_pedagogy/VAE_Basic.png)
 
 We talked before about how convolutional neural networks (CNNs) are
 particularly well-suited to dealing with image data. Thus, you may
@@ -86,7 +83,7 @@ can train it to improve the resolution or quality of an image (Instagram
 and TikTok filters that do this could very well be based on this
 technology).
 
-### Variational Autoencoders {#variational-autoencoders .unnumbered}
+# Variational Autoencoders
 
 A standard autoencoder learns a deterministic mapping from input to
 latent space. Given an input, the encoder always produces the same
@@ -115,7 +112,7 @@ plausible. If a VAE were trained on the `MNIST` dataset, we could sample
 the latent space at different points to generate images of digits drawn
 with different styles.
 
-### Generative Adversarial Networks {#generative-adversarial-networks .unnumbered}
+# Generative Adversarial Networks
 
 A **generative adversarial network** (GAN) takes a different approach to
 generation. Instead of learning a latent space, a GAN uses two networks
@@ -137,7 +134,7 @@ GANs can produce high-quality, realistic images, but the training can be
 unstable. The generator may suffer from *mode collapse,* where it
 produces only a few types of outputs.
 
-### Diffusion models {#diffusion-models .unnumbered}
+# Diffusion models
 
 **Diffusion models** work by gradually adding noise to data and then
 learning to reverse the process. In the **forward process,** noise is
@@ -155,19 +152,18 @@ images because they require many iterative steps.
 ![The strengths and weaknesses of each of the three main generative AI
 frameworks: Variational Autoencoders and Normalizing Flows, Generative
 Adversarial Networks, and Diffusion Models. From
-<https://www.nvidia.com/en-us/glossary/generative-ai/>.](figures/evaluateGAI.png){#fig:genai
-width="50%"}
+<https://www.nvidia.com/en-us/glossary/generative-ai/>.](../figures_pedagogy/evaluateGAI.png)
 
-### VAE, GAN or Diffusion? {#vae-gan-or-diffusion .unnumbered}
+# VAE, GAN or Diffusion?
 
 The previous sections contained guidance on the pros and cons of three
 generative AI approaches commonly used for image generation.
-[1.13](#fig:genai){reference-type="ref+label" reference="fig:genai"}
+[1.13](#fig:genai)
 conveys these pros and cons graphically to help you choose what to use
 based on your requirements on accuracy, diversity of generated data, and
 computational constraints.
 
-### Transformers {#transformers .unnumbered}
+# Transformers
 
 Generative models are not limited to images. How can models be trained
 to generate realistic sentences? Language is sequential and structured;
@@ -199,7 +195,7 @@ such language model could learn to predict the next word, "dog," based
 on the text of the sentence and the context it learned throughout
 training. Indeed, such a model could continue predicting words forever.
 
-### Foundation Models and Pretraining {#foundation-models-and-pretraining .unnumbered}
+# Foundation Models and Pretraining
 
 A **foundation model** is a large neural network[^23] trained on a
 massive dataset on a reconstruction task ( regenerating the data, like
@@ -222,7 +218,7 @@ can generate human-like text, answer questions and even write code. They
 are the result of scaling up the Transformer architecture to enormous
 sizes. GPT, Claude, Grok, Gemini and DeepSeek are all examples of LLMs.
 
-### Ethics of Generation {#ethics-of-generation .unnumbered}
+# Ethics of Generation
 
 Generative models raise significant ethical concerns. They learn from
 human data --- our text, our images, etc. --- which contains human
@@ -246,3 +242,12 @@ artist's entire portfolio to be uploaded to the dataset of a generative
 image model, and then ask the model to produce a new image in that
 artist's style. The data *is* the model. If the data is stolen, then any
 output of the model represents theft.
+
+[^21]: The term "deconvolution" does not actually refer to a transposed
+    convolution, though the two terms are often used interchangeably.
+    Avoid using "deconvolution."
+
+[^22]: These models don't process words but "tokens," mathematical
+    representations of words or word fragments.
+
+[^23]: "Large" meaning many parameters.

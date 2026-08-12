@@ -1,6 +1,4 @@
-## Regression and Classification
-
-### Learning Questions {#learning-questions-4 .unnumbered}
+# Learning Questions
 
 -   What is multiple linear regression?
 
@@ -8,7 +6,7 @@
 
 -   Why is logistic regression "classification?"
 
-### Introduction {#introduction-4 .unnumbered}
+# Introduction
 
 In the previous lesson, we covered machine learning as a whole, and we
 talked a lot about the linear model $y=mx+b$. If we have some feature
@@ -20,7 +18,7 @@ want to use in our model, but we still want the model to be linear ( we
 never exponentiate $x$), that is called **multiple linear regression**
 (also sometimes called *multilinear* regression).
 
-### Regression: Multiple Linear Regression {#regression-multiple-linear-regression .unnumbered}
+# Regression: Multiple Linear Regression
 
 This lesson will formalize the simple linear regression we talked about
 last time with some new notation that we can more easily expand the
@@ -129,8 +127,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 With great pleasure, allow me to introduce to you the **linear model**
-[\[eq:linearmodel1\]](#eq:linearmodel1){reference-type="ref+label"
-reference="eq:linearmodel1"}. With this equation, we can now express a
+[\[eq:linearmodel1\]](#eq:linearmodel1). With this equation, we can now express a
 linear model for any number of features! This is the key to multiple
 linear regression. If you aren't familiar with linear algebra, it may
 not yet be clear how this is useful to us. I'm sure you agree that the
@@ -158,7 +155,7 @@ features from our data. We know $\mathbf{y}$, it's just the targets in
 our dataset. If you can construct $\mathbf{X}$ and $\mathbf{y}$, you can
 do multiple linear regression. Congratulations!
 
-#### Notation {#notation .unnumbered}
+## Notation
 
 Notice how I denote a vector with a bold lowercase letter (
 $\mathbf{x}_i$, $\mathbf{y}$, $\boldsymbol{\beta}$), I delimit vectors
@@ -166,12 +163,11 @@ with brackets ( $\boldsymbol{\beta}=[\beta_0,\beta_1,...,\beta_p]$,
 $\mathbf{x}_i=[x_{i1},x_{i2},...,x_{ip}]$,
 $\mathbf{y}=[y_1,y_2,...,y_n]$), I delimit sets with braces (
 $\{\mathbf{x}_i,y_i\}_{i=1}^n$), and I denote matrices as bold capital
-letters ( $\mathbf{X}$ in [\[eq:X\]](#eq:X){reference-type="ref+label"
-reference="eq:X"}). Something else to note is that $p=n+1$ always. In
+letters ( $\mathbf{X}$ in [\[eq:X\]](#eq:X)). Something else to note is that $p=n+1$ always. In
 words: the number of parameters (for a linear model) is always equal to
 the number of features, plus one.
 
-### Classification: Logistic Regression {#classification-logistic-regression .unnumbered}
+# Classification: Logistic Regression
 
 That's a rather curious section title, isn't it? Is it classification or
 is it regression? Well, it's both! Let's return to our example data with
@@ -189,22 +185,19 @@ predicting $0.5$ which is neither a $1$ or a $0$. We need another model.
 
 **Logistic regression** is all about the logistic function in the same
 way that linear regression was all about the linear function. The
-logistic function ([1.7](#fig:logistic){reference-type="ref+label"
-reference="fig:logistic"}) has quite an unusual form, both
+logistic function ([1.7](#fig:logistic)) has quite an unusual form, both
 mathematically and graphically:
 
 $$\label{eq:logistic}
     \sigma(x)=\frac{1}{1+e^{-x}}$$
 
 ![The logistic
-function.](figures_pedagogy/Logistic-curve.svg.png){#fig:logistic
-width="50%"}
+function.](../figures_pedagogy/Logistic-curve.svg.png)
 
 The logistic function takes any input and always produces an output
 between 0 and 1. Which, you may notice, is quite handy if you are trying
 to predict a binary variable.
-[\[eq:logistic\]](#eq:logistic){reference-type="ref+label"
-reference="eq:logistic"} depicts the simplest version of the logistic
+[\[eq:logistic\]](#eq:logistic) depicts the simplest version of the logistic
 function, but we can create a logistic model by introducing some
 parameters:
 
@@ -215,8 +208,7 @@ makes a return.
 We need an objective function for this new model so we can figure out
 what the best parameters are. We also need to choose a threshold for
 classification. Did you notice how in
-[1.7](#fig:logistic){reference-type="ref+label"
-reference="fig:logistic"}, the logistic function can output numbers
+[1.7](#fig:logistic), the logistic function can output numbers
 between 0 and 1? This is not a problem: if the logistic model predicts a
 number $\geq0.5$, we count it as a 1, otherwise it's a 0.[^12] We are
 treating the output of the logistic model as a probabilistic
@@ -232,7 +224,7 @@ These two things make it impossible to consider the output of the linear
 model a probabilistic classification, and this is why logistic
 *regression* is actually classification.
 
-#### The Logistic Loss Function {#the-logistic-loss-function .unnumbered}
+## The Logistic Loss Function
 
 The objective function we'll use is called the **logistic loss** or
 simply log loss.[^13]
@@ -252,7 +244,7 @@ combination of our parameters until we find a good result? In the last
 lesson we discussed optimization schemes, so no. But for now, yes, we
 will find our parameters by brute force.[^14]
 
-#### Nominal Features {#nominal-features .unnumbered}
+## Nominal Features
 
 What if you have a feature in your dataset that is nominal? Imagine that
 you have a dataset and one of the features is titled "Blood Type." You
@@ -266,7 +258,7 @@ The answer is a process called **one-hot encoding.** We expand the
 "Blood Type" feature into four different features: "Blood Type: A,"
 "Blood Type: B," "Blood Type: AB," and "Blood Type: O." In each of these
 four new features, we input a 1 in the corresponding column.
-[1.3](#tab:onehot){reference-type="ref+label" reference="tab:onehot"}
+[1.3](#tab:onehot)
 shows what this would look like in a tabular dataset.
 
 ::: {#tab:onehot}
@@ -280,7 +272,7 @@ shows what this would look like in a tabular dataset.
   : An example of one-hot encoding.
 :::
 
-#### Min-Max Normalization {#min-max-normalization .unnumbered}
+## Min-Max Normalization
 
 Min-max normalization is a simple process that scales all numeric
 features to the range $[0, 1]$:
@@ -293,7 +285,7 @@ scale. Without normalization, income would dominate the model and age
 would contribute almost nothing. Normalization puts all features on
 equal footing.
 
-### More on the Split: Training, Validation and Test {#more-on-the-split-training-validation-and-test .unnumbered}
+# More on the Split: Training, Validation and Test
 
 In the last lesson we touched on why you want to split your data into
 three non-overlapping subsets: the training set, the validation set and
@@ -359,3 +351,22 @@ cost of making a mistake. If you were to read this section and conclude
 that the best *starting place* is a one-third split for each set, that
 is fine. But never forget: **the representativeness of your splits
 matters more than the exact ratios.**
+
+
+
+[^10]: I'm using the same notation that the Wikipedia page for "Ordinary
+    least squares" uses, and I encourage you to look at that page for
+    --- if nothing else --- an alternative wording of the same math
+    which may help aid in your understanding.
+
+[^11]: Note that rainfall is also a feature, but we are choosing this
+    feature to be the one that we predict based on the others.
+
+[^12]: You don't have to choose a threshold of $0.5$.
+
+[^13]: The log loss is equivalent (up to a constant) to the
+    cross-entropy loss, which is used in neural networks.
+
+[^14]: Strange as it is, brute force is the *technical* term for
+    computing all possible solutions (in a range) to choose the best
+    one.

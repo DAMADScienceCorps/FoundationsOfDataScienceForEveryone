@@ -1,6 +1,4 @@
-## Tree Models
-
-### Learning Questions {#learning-questions-5 .unnumbered}
+# Learning Questions
 
 -   What is a decision tree?
 
@@ -12,7 +10,7 @@
 
 -   How does regression with tree models work?
 
-### Introduction {#introduction-5 .unnumbered}
+# Introduction
 
 Decision trees are among the most intuitive and interpretable types of
 machine learning models. They mimic the way humans make decisions: by
@@ -21,7 +19,7 @@ possibilities until a conclusion is reached. But despite their
 simplicity, decision trees are also among the most successful types of
 models, seeing widespread use in all disciplines.
 
-### The Decision Tree {#sec:pedagogy:trees .unnumbered}
+# The Decision Tree
 
 A decision tree is a kind of flowchart, where each internal node
 represents a test --- a question --- on a feature. Each branch of the
@@ -31,7 +29,7 @@ prediction, you start with your observation you want to predict on,
 $\mathbf{x}_i$, and you traverse the tree by answering questions about
 your observation until you reach a leaf.
 
-[1.8](#fig:dtc){reference-type="ref+label" reference="fig:dtc"} provides
+[1.8](#fig:dtc) provides
 an example of a decision tree classifier. The dataset has three
 features: outlook (sunny, rain), humidity ($0-100\%$), and windy (yes,
 no). The target variable is whether or not a sports game will be allowed
@@ -45,7 +43,7 @@ and arrive at that node, the amount of observations with the target
 variable 'play,' or 'don't play,' is written.
 
 ![An example decision
-tree.](figures_pedagogy/Decision_tree_model.png){#fig:dtc width="50%"}
+tree.](../figures_pedagogy/Decision_tree_model.png)
 
 Along the bottom layer, we actually see that all four of the leaf nodes
 (remember that a node with no branches is called a leaf) have either
@@ -56,7 +54,7 @@ You may be wondering: how does the model know which question to ask at
 each node? The goal of the model is to ask a question that leads to the
 purest nodes. To do this, we need a way to quantify node purity.
 
-### Gini Impurity {#gini-impurity .unnumbered}
+# Gini Impurity
 
 The **Gini impurity** is a common metric for measuring the purity of a
 decision in a tree. If the dataset has $J$ class labels ($J=2$, 'play'
@@ -70,12 +68,11 @@ $$\begin{aligned}
 where $p_1$ is the relative frequency of class label 1 ('play') and
 $p_2$ is the relative frequency of class label 2 ('don't play') (they
 are denoted as $p$ because, as we discussed in
-[1.2](#sec:pedagogy:stats){reference-type="ref+label"
-reference="sec:pedagogy:stats"}, frequencies *can* be interpreted as
+[1.2](#sec:pedagogy:stats), frequencies *can* be interpreted as
 probabilities, unless you work in a Bayesian framework).
 
 Let's calculate the impurity of some of the nodes in
-[1.8](#fig:dtc){reference-type="ref+label" reference="fig:dtc"}.
+[1.8](#fig:dtc).
 Consider the root node, where the total number of samples is
 $N=N_1+N_2=9+5=14$. The relative frequency of 'play' is $N_1/N=64\%$,
 and for 'don't play' it's $N_2/N=36\%$. To calculate the Gini impurity:
@@ -119,16 +116,16 @@ put "probability" in quotes because it is not a probability in a
 Bayesian sense, which is what we most often want to achieve with machine
 learn models).
 
-#### Decision Trees and Data Types {#decision-trees-and-data-types .unnumbered}
+## Decision Trees and Data Types
 
 Decision trees can handle both categorical and numerical features. For
 categorical or numerical features alike, a question at a node *always*
 splits the data into two branches. In
-[1.8](#fig:dtc){reference-type="ref+label" reference="fig:dtc"}, one
+[1.8](#fig:dtc), one
 node question is whether the humidity is $\leq70\%$ or $>70\%$. This
 threshold is chosen to minimize the Gini impurity.
 
-#### Decision Tree Hyperparameters {#decision-tree-hyperparameters .unnumbered}
+## Decision Tree Hyperparameters
 
 Decision trees have several important hyperparameters that govern their
 growth and complexity. Here I refer specifically to the `scikit-learn`
@@ -136,7 +133,7 @@ implementation of decision trees.
 
 `max_depth`: The maximum depth of the tree. This isn't how many branches
 can be made; it's how many rounds of decisions can be made. In
-[1.8](#fig:dtc){reference-type="ref+label" reference="fig:dtc"}, the
+[1.8](#fig:dtc), the
 total depth was two. Deeper trees can capture more complex patterns but
 are more prone to overfitting. With an unlimited number of trees, the
 model *will* overfit.
@@ -158,7 +155,7 @@ this lesson).
 apart from Gini impurity. Entropy is the other common criterion you will
 see.
 
-#### Pruning {#pruning .unnumbered}
+## Pruning
 
 Decision trees are notorious for overfitting. A tree that is allowed to
 grow until every leaf is pure will perfectly classify the training data,
@@ -169,8 +166,7 @@ generalizability will be very poor.
 Overfitting occurs because the tree can continue splitting until each
 leaf contains samples of only one class. This is particularly
 problematic when the dataset is small relative to the number of
-features, like in [1.8](#fig:dtc){reference-type="ref+label"
-reference="fig:dtc"}. Several techniques can prevent overfitting in
+features, like in [1.8](#fig:dtc). Several techniques can prevent overfitting in
 decision trees. The simplest is **early stopping:** halting the growth
 of the tree when certain criteria are met, such as reaching a maximum
 depth or a minimum number of samples per leaf. **Pruning** is another
@@ -178,7 +174,7 @@ approach where the tree is first grown to its full size. Nodes that do
 not provide significant improvement in predictive power are then
 removed.
 
-### Ensemble Methods {#ensemble-methods .unnumbered}
+# Ensemble Methods
 
 While a single decision tree is easy to visualize and understand
 (something we call "interpretability"), its predictive power is often
@@ -188,7 +184,7 @@ collection of not-so-good decision trees (called "weak learners") that
 are only slightly better than a random guess can form a good decision
 tree ("strong learner") when combined appropriately.
 
-#### Random Forests {#random-forests .unnumbered}
+## Random Forests
 
 A **random forest** is an ensemble of decision trees, each trained on a
 random bootstrap sample[^15] of the data. This means that each tree sees
@@ -206,7 +202,7 @@ noise in their training data, the majority vote of many trees will
 converge on the correct answer. Random forests are more robust to
 overfitting than single decision trees.
 
-#### Gradient Boosting {#gradient-boosting .unnumbered}
+## Gradient Boosting
 
 **Gradient boosting** is another ensemble tree method. Instead of
 building trees in parallel to each other, gradient boosting builds trees
@@ -220,7 +216,7 @@ problems. The `XGBoost` library is an optimized implementation of
 gradient boosting that also includes other features like regularization,
 which we will discuss more thoroughly in the lesson on neural networks.
 
-#### Boosting and Bagging {#boosting-and-bagging .unnumbered}
+## Boosting and Bagging
 
 Two terms you hear often in machine learning spaces are **boosting** and
 **bagging.** Bagging (bootstrap aggregating) is used in random forests.
@@ -232,7 +228,7 @@ while boosting helps to reduce model bias. Both types of models are
 useful. In fact, you may want to try both on the same task to see which
 is best.
 
-#### Regression {#regression .unnumbered}
+# Regression
 
 The decision tree algorithm seems naturally inclined towards
 classification tasks; however, it is equally capable of regression. A
@@ -240,7 +236,7 @@ classification tasks; however, it is equally capable of regression. A
 Instead of Gini impurity, regression trees use a splitting criterion
 based on the reduction in MSE of the target variable.
 
-### Interpretability {#interpretability .unnumbered}
+# Interpretability
 
 Decision trees are remarkably interpretable. A trained tree can be
 visualized and understood by anyone. This interpretability is a major
@@ -251,7 +247,7 @@ training data can lead to vastly different splits and thus vastly
 different trees. The order of the splits matters. Ensemble methods
 mitigate this instability.
 
-### Feature importance {#feature-importance .unnumbered}
+# Feature importance
 
 Tree models provide a measure of **feature importance.** By tracking how
 much each feature reduces impurity across all splits in a tree, we can
@@ -259,3 +255,8 @@ determine which features are the most important for prediction. In a
 Random Forest, we can also obtain a measure of the variance of the
 importance by looking at the variance of its impact for all splits
 across different trees.
+
+[^15]: A sample drawn with replacement from the dataset. That is: select
+    a subset of size $N$ out of a dataset of size $M$, where $N < M$; do
+    that several times, each time selecting $N$ from the full $M$
+    objects, and treat each subset separately.

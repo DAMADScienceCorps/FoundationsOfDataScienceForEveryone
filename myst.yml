@@ -32,13 +32,13 @@ project:
 
     - title: "Chapter 4: Null Hypothesis Rejection Testing"
       children:
-        - file: Chapter04/Lesson.md
+        - file: Chapter04/Lecture.md
         # - file: Chapter04/Lesson4.1_NHRT.ipynb
         # - file: Chapter04/Lesson4.2_NHRT.ipynb
 
     - title: "Chapter 5: Introduction to Machine Learning"
       children:
-        - file: Chapter05/Lesson.md
+        - file: Chapter05/Lecture.md
         # - file: Chapter05/Lesson5.1_LinearRegression.ipynb
         # - file: Chapter05/Lesson5.2_MultipleLinearRegression.ipynb
 
@@ -46,25 +46,25 @@ project:
 
     - title: "Chapter 6: Regression and Classification"
       children:
-        - file: Chapter06/Lesson.md
+        - file: Chapter06/Lecture.md
         # - file: Chapter06/Lesson6_LogisticRegression.ipynb
         # - file: Chapter06/Exercises.ipynb
 
     - title: "Chapter 7: Tree Models"
       children:
-        - file: Chapter07/Lesson.md
+        - file: Chapter07/Lecture.md
         # - file: Chapter07/Lesson7.1_Classification.ipynb
         # - file: Chapter07/Lesson7.2_TitanicDataset.ipynb
         # - file: Chapter07/Exercises.ipynb
 
     - title: "Chapter 8: Clustering"
       children:
-        - file: Chapter08/Lesson.md
+        - file: Chapter08/Lecture.md
         # - file: Chapter08/Exercises.ipynb
 
     - title: "Chapter 9: Inferential Neural Networks"
       children:
-        - file: Chapter09/Lesson.md
+        - file: Chapter09/Lecture.md
         # - file: Chapter09/Lesson9.1_ANN_MNIST.ipynb
         # - file: Chapter09/Lesson9.2_ANN_iris.ipynb
         # - file: Chapter09/Lesson9.3_CNN_MNIST.ipynb
@@ -72,19 +72,19 @@ project:
 
     - title: "Chapter 10: Generative Neural Networks"
       children:
-        - file: Chapter10/Lesson.md
+        - file: Chapter10/Lecture.md
         # - file: Chapter10/Lesson10.1_VAE.ipynb
         # - file: Chapter10/Lesson10.2_Superresolution.ipynb
 
-    # - title: "Midterm Exam"
-    #   children:
-    #     - file: Midterm/intro.md
-    #     - file: Midterm/midterm.ipynb
+    - title: "Midterm Exam"
+      children:
+        # - file: Midterm/intro.md
+        - file: Midterm/midterm.ipynb
 
-    # - title: "Final Exam"
-    #   children:
-    #     - file: Final/intro.md
-    #     - file: Final/final.ipynb
+    - title: "Final Exam"
+      children:
+        # - file: Final/intro.md
+        - file: Final/final.ipynb
 
 site:
   template: book-theme

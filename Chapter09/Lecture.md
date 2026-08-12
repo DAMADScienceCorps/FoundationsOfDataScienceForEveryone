@@ -1,6 +1,4 @@
-## Inferential Neural Networks {#sec:nn}
-
-### Learning Questions {#learning-questions-7 .unnumbered}
+# Learning Questions
 
 -   What is a perceptron?
 
@@ -16,7 +14,7 @@
 
 -   What is regularization?
 
-### Introduction {#introduction-7 .unnumbered}
+# Introduction
 
 The neural network is an algorithm --- a collection of algorithms ---
 inspired by the human brain. A biological neuron receives signals
@@ -40,7 +38,7 @@ networks, transformers and large language models, all of which are now
 colloquially referred to as "Artificial Intelligence" (AI)) will come in
 the next lesson.
 
-### The Perceptron {#the-perceptron .unnumbered}
+# The Perceptron
 
 The **perceptron** is the simplest neural network. It was invented in
 1957, though it was theorized a decade earlier. When the New York Times
@@ -61,7 +59,7 @@ then discovered that multiple perceptrons *would* be able to model
 nonlinearity. This is the multilayer perceptron, the foundation of
 modern deep learning.
 
-### The Neuron Equation {#the-neuron-equation .unnumbered}
+# The Neuron Equation
 
 A **neuron** is the fundamental unit of a neural network. Ultimately, a
 neuron is just a function. It has inputs and outputs. We can represent
@@ -89,7 +87,7 @@ The importance of this equation, not just for the field of machine
 learning and data science but for world history too, is nearly
 impossible to overstate.
 
-### Activation Functions {#activation-functions .unnumbered}
+# Activation Functions
 
 The activation function is what gives ANNs their nonlinearity and thus
 their ability to learn complex relationships between inputs and outputs.
@@ -107,7 +105,7 @@ logistic function, $\sigma(z)=\frac{1}{1+e^{-z}}$. The input of the
 sigmoid can be any real number, but the output is always between zero
 and one.
 
-### The Multilayer Perceptron {#the-multilayer-perceptron .unnumbered}
+# The Multilayer Perceptron
 
 A single neuron is limited, but multiple neurons can learn anything. A
 **multilayer perceptron** (MLP) consists of a group of neurons called
@@ -119,10 +117,9 @@ weight, and each neuron has its own bias.
 
 ![ A simple Artificial Neural Network diagram of a densely connected
 network. Source: Wikipedia, Colin M.L.
-Burnett.](Colored_neural_network.svg.png){#fig:pedagogy_ann width="50%"}
+Burnett.](../figures_pedagogy/Colored_neural_network.svg.png)
 
-Take a look at [1.11](#fig:pedagogy_ann){reference-type="ref+label"
-reference="fig:pedagogy_ann"}, which shows an example of a densely
+Take a look at [1.11](#fig:pedagogy_ann), which shows an example of a densely
 connected neural network with one hidden layer. The input layer has
 three neurons, the hidden layer has four neurons, and the output layer
 has two neurons. How many parameters does this model have?
@@ -158,7 +155,7 @@ $n_{i-1}$ is the number of neurons in the previous layer.
 When someone talks about a "simple" neural network, or a "dense
 network," they're most likely referring to an MLP.
 
-### The Universal Approximation Theorem {#the-universal-approximation-theorem .unnumbered}
+# The Universal Approximation Theorem
 
 In 1989, it was proven that a neural network with a single hidden layer
 (with a finite number of neurons in that layer) can approximate *any*
@@ -172,7 +169,7 @@ networks aren't magic. They rely on good data and on good architectural
 choices, like how many neurons, which activation functions, which loss
 function, etc., just like any other model.
 
-### Training Neural Networks {#training-neural-networks .unnumbered}
+# Training Neural Networks
 
 The goal of training a neural network is to adjust the weights and
 biases so that the output of the network matches the target output. Does
@@ -189,12 +186,11 @@ cross-entropy**, but really it's the same thing. For multi-class
 classification[^19] the loss function is similar, but it's called
 **categorical cross-entropy**.[^20]
 
-#### Backpropagation {#backpropagation .unnumbered}
+## Backpropagation
 
 It was a challenge figuring out the OLS method for finding the best
 parameters for the linear model, and the tiny network shown in
-[1.11](#fig:pedagogy_ann){reference-type="ref+label"
-reference="fig:pedagogy_ann"} had 26 parameters! How do we find the best
+[1.11](#fig:pedagogy_ann) had 26 parameters! How do we find the best
 values for all those weights and biases? The algorithm is called
 **backpropagation**. First, the network passes the data through the
 network, calculating the neuron equation for every neuron in sequence.
@@ -213,7 +209,7 @@ include the entire training set passing through the network, or it can
 `batch_size` hyperparameter governs this for most implementations of
 ANNs.
 
-### Recurrent Neural Networks {#recurrent-neural-networks .unnumbered}
+# Recurrent Neural Networks
 
 Feed-forward neural networks treat each input independently. The neuron
 doesn't store any information about what it has done in the past. This
@@ -247,7 +243,7 @@ LSTMs are the de facto standard ANN for sequential data, though this has
 changed since 2017 with the advent of the Transformer, which we will
 discuss in the next lesson.
 
-### Convolutional Neural Networks {#convolutional-neural-networks .unnumbered}
+# Convolutional Neural Networks
 
 None of the networks discussed so far were designed with images in mind.
 Images are tricky. They are at least 2D (height, width), but they can be
@@ -398,7 +394,7 @@ convolutional layer are the pixels of the kernel. As the CNN learns, the
 shape of the kernels changes, and the features extracted from the inputs
 are adjusted based on what would produce the best output for the model.
 
-### Regularization {#regularization .unnumbered}
+# Regularization
 
 Because neural networks are so flexible, they're prone to overfitting.
 The universal approximation theorem already tells us that a network with
@@ -420,7 +416,7 @@ stopping will halt training. When the validation set performance stops
 improving, that's a good indicator that the model's generalizability
 isn't improving either.
 
-### The Black Box {#the-black-box .unnumbered}
+# The Black Box
 
 Neural networks are referred to as "black boxes." They often have so
 many parameters that it's impossible to interpret why a particular
@@ -431,3 +427,35 @@ Neural networks achieve state-of-the-art performance on many tasks ---
 that's why they're so popular; they're demonstrably powerful. But if
 interpretability is important, which it is in some domains like medicine
 or criminal justice, then ANNs may not be appropriate.
+
+
+[^17]: We've only ever had datasets with one target feature before, but
+    when you have more than one, it's called "multi-label
+    classification."
+
+[^18]: We could be a bit more precise here. The theorem states that for
+    any given function and any desired accuracy ($\epsilon > 0$), there
+    exists a network with a sufficiently large, but finite, number of
+    neurons in its hidden layer to achieve that accuracy on a compact
+    (closed and bounded) subset of $\mathbb{R}^n$ ( \[0,1\]). Also, the
+    activation function has some requirements, namely, it cannot be
+    linear (recall that the perceptron could only learn linear
+    functions, partially because it lacked a nonlinear activation
+    function). Finally, it is an *existence* theorem, not a learnability
+    theorem: it proves that such a network exists, but it does not prove
+    that the training will actually find the correct weights, nor does
+    it guarantee the network will generalize well to unseen data.
+
+[^19]: Multi-class classification is where you are predicting one target
+    with multiple classes, predicting whether an image is of an apple,
+    banana, or peach. Binary classification is when you are predicting
+    one target with only two classes. Multi-label classification is when
+    you are predicting multiple *targets*, predicting whether an image
+    contains fruit *and* whether the image contains an animal.
+
+[^20]: As it turns out, one can express a lot of creativity in the
+    formulation of the loss function, and a lot of what makes a model
+    successful is a good, perhaps custom-designed loss function. The
+    ones listed above are the canonical choices which are all you will
+    need to work with in this class, and perhaps in your whole data
+    science career.

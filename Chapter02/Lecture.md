@@ -1,6 +1,4 @@
-## Data Exploration {#sec:pedagogy:stats}
-
-### Learning Questions {#learning-questions .unnumbered}
+# Learning Questions
 
 -   What does it mean to 'explore' data?
 
@@ -10,7 +8,7 @@
 
 -   How can `pandas` help to inspect data?
 
-### Introduction {#introduction .unnumbered}
+# Introduction
 
 Effective decision-making requires data. Before any sophisticated
 modeling or inference can begin, you must thoroughly understand your
@@ -31,7 +29,7 @@ Our first inspection tools will be scatter plots and Pearson's
 correlation coefficient. Python's `pandas` package will help us greatly
 in this endeavor.
 
-### Pearson's Correlation Coefficient {#pearsons-correlation-coefficient .unnumbered}
+# Pearson's Correlation Coefficient
 
 Pearson's correlation coefficient, denoted as $r_{xy}$, measures the
 strength and direction of a *linear* relationship between two variables.
@@ -59,23 +57,20 @@ correlation ( the x and y variables are clearly related) but
 $r_{xy} = 0$. **Pearson's coefficient detects only linear
 relationships**. The best thing you can do to avoid missing obvious
 correlations in your data is to visualize it with a scatter plot like in
-[1.1](#fig:pedagogy:linear_corr){reference-type="ref+label"
-reference="fig:pedagogy:linear_corr"}.
+[1.1](#fig:pedagogy:linear_corr).
 
 ![Some standard and some curious examples of measuring linear
 correlation between the horizontal and vertical
-axes.](figures_pedagogy/linear_corr.png){#fig:pedagogy:linear_corr
-width="100%"}
+axes.](../figures_pedagogy/linear_corr.png)
 
-[1.1](#fig:pedagogy:linear_corr){reference-type="ref+label"
-reference="fig:pedagogy:linear_corr"} demonstrates the limitations of
+[1.1](#fig:pedagogy:linear_corr) demonstrates the limitations of
 the Pearson's correlation coefficient. The top row and center row show
 data with the same $r_{xy}$, but note how the noisier data in the top
 row can have identical $r_{xy}$ but look very different. The bottom row
 shows data with obvious correlation. That is, each data point is clearly
 related to each other. However, these datasets all have $r_{xy} = 0$
 
-### Probability {#probability .unnumbered}
+# Probability
 
 Probability admits two primary interpretations, each with distinct
 philosophical and practical implications. **Frequentist probability**
@@ -101,10 +96,10 @@ data about the same phenomenon).
 
 For most introductory data exploration tasks, the frequentist
 interpretation suffices. However, many popular machine learning methods
-( Gaussian processes, MCMC, Bayesian neural networks) explicitly rely on
+(Gaussian processes, MCMC, Bayesian neural networks) explicitly rely on
 Bayesian reasoning.
 
-### Probability Arithmetic {#probability-arithmetic .unnumbered}
+# Probability Arithmetic
 
 Probability obeys several fundamental rules. *The* most fundamental rule
 being: probability is always represented by a number between 0 and 1
@@ -122,7 +117,7 @@ $\bar{A}$ where the coin lands tails up. $\bar{A}$ is said to be the
 *complement* of $A$ and ― assuming the coin cannot land in any other
 state besides heads up or tails up ― $P(A) + P(\bar{A}) = 1$.
 
-#### Independent (Disjoint) Events {#independent-disjoint-events .unnumbered}
+## Independent (Disjoint) Events
 
 When two events are independent --- the two events do not influence each
 other whatsoever ― there exists a relationship between the probabilities
@@ -145,7 +140,7 @@ $$\begin{aligned}
     P(A | B) &= P(A)
 \end{aligned}$$
 
-#### Dependent Events {#dependent-events .unnumbered}
+## Dependent Events
 
 When events are dependent upon each other in some way, the preceding
 rules no longer hold, and new relationships emerge. We may state a
@@ -161,7 +156,7 @@ $$\begin{aligned}
     P(A \cap B) &= P(A) P(B|A)
 \end{aligned}$$
 
-### Practical Data Exploration with Pandas {#practical-data-exploration-with-pandas .unnumbered}
+# Practical Data Exploration with Pandas
 
 In Python, the `pandas` library provides the `DataFrame` object, the
 workhorse for tabular data exploration. We will use the function

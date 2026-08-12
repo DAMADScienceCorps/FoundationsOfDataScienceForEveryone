@@ -320,3 +320,8 @@ Lesson 9: Inferential Neural Networks
 Lesson 10: Generative Neural Networks
 
 :   Autoencoders for super-resolution, an overview of LLMs.
+
+
+[^1]: https://github.com/FoxFortino/SaturnineQuail-pedagogy
+
+[^2]: <https://github.com/FoxFortino/SaturnineQuail-pedagogy>

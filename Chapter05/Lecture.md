@@ -1,6 +1,4 @@
-## Introduction To Machine Learning
-
-### Learning Questions {#learning-questions-3 .unnumbered}
+# Learning Questions
 
 -   What is data?
 
@@ -22,7 +20,7 @@
 
 -   What is overfitting?
 
-### Introduction {#introduction-3 .unnumbered}
+# Introduction
 
 Imagine you are trying to teach a computer to recognize handwritten
 digits. You could try to write explicit rules: "A seven has a horizontal
@@ -36,7 +34,7 @@ And there is! Instead of programming the rules explicitly, you can show
 the computer many examples of handwritten digits and let it discover the
 rules itself. This is **supervised machine learning.**
 
-### Part 1: What Is Data? {#part-1-what-is-data .unnumbered}
+# Part 1: What Is Data?
 
 Before we can build models, we must understand the types of data we work
 with. The NOIR taxonomy classifies data into four levels of measurement.
@@ -86,7 +84,7 @@ as ratio data. This is a mistake. If your data lacks a true zero,
 reporting that "the average temperature doubled" is mathematically
 incorrect.
 
-### Part 2: What Is Machine Learning? {#part-2-what-is-machine-learning .unnumbered}
+# Part 2: What Is Machine Learning?
 
 One time in 1959, some important guy[^5] said something really
 insightful about machine learning. "\[Machine learning is\] the field of
@@ -112,7 +110,7 @@ represent a decision that you have made about how you want your model to
 be. They are not learned from the data. You must choose them based on
 your own knowledge.
 
-### Machine Learning Paradigms {#machine-learning-paradigms .unnumbered}
+# Machine Learning Paradigms
 
 Machine learning can be done in all sorts of different ways. To explain
 them, we first need to understand the concept of a **feature.** If you
@@ -152,7 +150,7 @@ tell it. With **reinforcement learning,** the model (agent) learns to
 make sequential decisions by maximizing a cumulative reward signal
 through interactions with an environment.[^6]
 
-### Part 3: Model Fitting and Objective Functions {#part-3-model-fitting-and-objective-functions .unnumbered}
+# Part 3: Model Fitting and Objective Functions
 
 For now, we will focus on supervised machine learning where our ultimate
 goal is to use our features to predict some target by fitting a model.
@@ -168,14 +166,12 @@ $y = mx + b$.
 
 ![A collection of data points spread out in a rough line is approximated
 by a linear model. In this case, the parameters of the model are $m=1$
-and $b=0$.](figures_pedagogy/linearmodel.pdf){#fig:linearmodel
-width="50%"}
+and $b=0$.](../figures_pedagogy/linearmodel.pdf)
 
 **Step 2:** Optimize an **objective function** (also called a loss
 function) that quantifies how well the model fits the data. Consider the
 machine learning task posed in
-[1.6](#fig:linearmodel){reference-type="ref+label"
-reference="fig:linearmodel"} where we have a collection of data points,
+[1.6](#fig:linearmodel) where we have a collection of data points,
 and we want to fit a linear model to it. We don't know what the
 parameters of the model are yet (that's what machine learning does), so
 we're going to guess the parameters first and then see how good that
@@ -212,7 +208,7 @@ there is no "best" objective function. You always want to choose the
 objective function that is best for your machine learning task; in this
 way, the choice of the objective function is a hyperparameter.
 
-#### Ordinary Least Squares (OLS) Regression {#ordinary-least-squares-ols-regression .unnumbered}
+## Ordinary Least Squares (OLS) Regression
 
 Depending on your choice of objective function, you may be able to
 analytically solve for the best parameters ( do some clever math rather
@@ -229,7 +225,7 @@ $$\begin{aligned}
 where $\bar{x}$ and $\bar{y}$ are the average values of $x$ and $y$ in
 your data.[^7]
 
-### Part 4: Model Performance Metrics {#part-4-model-performance-metrics .unnumbered}
+# Part 4: Model Performance Metrics
 
 We already discussed how the objective function quantifies how good of a
 model you have, but we can generalize that idea further. A **metric** is
@@ -290,8 +286,7 @@ the target was positive (a **true positive,** TP); we predict negative
 and the target was negative (a **true negative,** TN); we predict
 positive and the target was negative (a **false positive,** FP); we
 predict negative and the target was positive (a **false negative,** FN).
-Table [1.2](#tab:confusion_table){reference-type="ref"
-reference="tab:confusion_table"} represents these four outcomes in
+Table[1.2](#tab:confusion_table) represents these four outcomes in
 **confusion matrix.**
 
 ::: {#tab:confusion_table}
@@ -324,7 +319,7 @@ representing both equally within one metric. All four of these metrics
 can take on values between 0 and 1, and can therefore be represented by
 percentages.
 
-### The Split: Training, Validation, and Test {#the-split-training-validation-and-test .unnumbered}
+# The Split: Training, Validation, and Test
 
 Here is a trap that ensnares many students: You fit a model to your data
 and you evaluate its performance on that data. The performance looks
@@ -351,7 +346,7 @@ the results z you will include the performance of the model on this test
 set. You never use the test set to inform any model parameters or
 hyperparameters.
 
-#### Overfitting and Underfitting {#overfitting-and-underfitting .unnumbered}
+## Overfitting and Underfitting
 
 When your model is too simple to capture the underlying pattern in the
 data, we say the model is underfitting. Imagine fitting a straight line
@@ -377,7 +372,7 @@ the validation data. The theme here is that we want our models to
 generalize, and the only way to ensure that is to hide parts of the
 dataset from our model and then surprise it at the end.
 
-### Optimization {#optimization .unnumbered}
+# Optimization
 
 We discussed objective functions, formulae that quantify how poorly or
 how well a model fits data. The L1 objective sums absolute errors. The
@@ -467,3 +462,20 @@ estimate (which improves with more points) with the ability to avoid
 local minima. Local minima are a significant challenge in optimization,
 especially for models with many parameters, so mini-batch gradient
 descent, or some variant of it, is very common.
+
+
+[^4]: Any system at $0\text{ K}$ would still have some zero-point
+    energy, so this statement isn't completely true.
+
+[^5]: Arthur Samuel, a pioneer in machine learning.
+
+[^6]: Reinforcement learning is really cool! Maybe I will add a lesson
+    on it one day.
+
+[^7]: You may have encountered this before under a different name. When
+    I was in high school, I learned about the "line of best fit," which
+    was almost certainly the OLS method.
+
+[^8]: also called positive predictive value (PPV)
+
+[^9]: also called sensitivity

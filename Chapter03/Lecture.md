@@ -1,6 +1,4 @@
-## Statistics
-
-### Learning Questions {#learning-questions-1 .unnumbered}
+# Learning Questions
 
 -   What is a distribution?
 
@@ -12,7 +10,7 @@
 
 -   What is the Central Limit Theorem?
 
-### Introduction {#introduction-1 .unnumbered}
+# Introduction
 
 Data in the real world (, data not generated for the purpose of
 learning) emerge as observations drawn from underlying *distributions.*
@@ -31,7 +29,7 @@ because they enable us to understand the two most important ideas in
 statistics: The **Law of Large Numbers** and **The Central Limit
 Theorem.**
 
-### The Poisson Distribution {#the-poisson-distribution .unnumbered}
+# The Poisson Distribution
 
 The best way to form an intuitive understanding of any distribution is
 to examine an example that resonates with you. Since I don't know who
@@ -83,10 +81,9 @@ on any real value?
 
 ![A plot of the probability mass functions for the Poisson distribution
 at three different values of $\lambda$. Image credit: Skbkekas
-(Wikipedia)](figures_pedagogy/Poisson_pmf.svg.png){#fig:poisson_pmf
-width="100%"}
+(Wikipedia)](../figures_pedagogy/Poisson_pmf.svg.png)
 
-### The Gaussian Distribution {#the-gaussian-distribution .unnumbered}
+# The Gaussian Distribution
 
 Consider a class of 100 students who take a test. To be accurate with
 our example, we must also imagine that the score of the test can take
@@ -114,8 +111,7 @@ average, but also the students mostly scored around $85\%$.
 
 ![Two examples of a Gaussian probability distribution function with
 different means and standard
-deviations.](figures_pedagogy/gaussian_pdf.pdf){#fig:gaussian
-width="100%"}
+deviations.](../figures_pedagogy/gaussian_pdf.pdf)
 
 There are a few things to note about the Gaussian distribution and our
 particular choice of example. First, our example has limited support.
@@ -154,7 +150,7 @@ $$P_\mathcal{N}(X \geq -2) + P_\mathcal{N}(X \leq 2) = 95.4\%$$ In the
 next section we will see why, and in the next lecture, we will leverage
 this fact to test a hypotheses.
 
-### Moments of a Distribution {#moments-of-a-distribution .unnumbered}
+# Moments of a Distribution
 
 Let's define something called a **moment** of some function, $f(x)$.
 
@@ -194,12 +190,12 @@ kurtosis will appear to "lean" to the left. Once again, you will find
 that the kurtosis of a Gaussian is 0. Overall, we can say that the
 moments of a distribution quantify its shape.
 
-### Quantiles and the Empirical Rule {#quantiles-and-the-empirical-rule .unnumbered}
+# Quantiles and the Empirical Rule
 
 Quantiles divide a distribution into equal-sized intervals. For the
 Gaussian distribution, quantiles corresponding to integer multiples of
 the standard deviation are particularly important.
-[1.4](#fig:stddevs){reference-type="ref+label" reference="fig:stddevs"}
+[1.4](#fig:stddevs)
 shows a standard normal distribution where each standard deviation from
 the mean is marked. The area under the curve in each of the regions is
 written above.
@@ -207,7 +203,7 @@ written above.
 ![A standard normal distribution ($\mu=0$, $\sigma=1$). Each standard
 deviation is marked with vertical dashed lines and the percentage of the
 area under the curve in each region is
-annotated.](figures_pedagogy/stddevs.pdf){#fig:stddevs width="100%"}
+annotated.](../figures_pedagogy/stddevs.pdf)
 
 Remember our test example? We said that $\mu=85\%$ and $\sigma=5\%$.
 Using this chart --- *and assuming that the test scores are indeed
@@ -219,7 +215,7 @@ scored within two standard deviations (between $75\%$ and $95\%$).
 **NB:** This concept will become exceptionally relevant in the next
 lecture on Null Hypothesis Rejection Testing.
 
-### The Law of Large Numbers {#the-law-of-large-numbers .unnumbered}
+# The Law of Large Numbers
 
 Let's first define some terms: in statistics, we refer to a finite group
 of examples of a given phenomenon that you can collect data on ( a
@@ -242,7 +238,7 @@ the sample mean converges to the population mean. This convergence
 explains the intuitive knowledge that larger samples will yield more
 stable estimates.
 
-### The Central Limit Theorem {#the-central-limit-theorem .unnumbered}
+# The Central Limit Theorem
 
 The Central Limit Theorem (CLT) is arguably the most important result in
 introductory statistics. It's important to internalize --- this will
@@ -274,3 +270,6 @@ Measuring the rate of a dripping faucet may not be very interesting, but
 many sciences boil down to the measurement of variables. The CLT gives
 us the confidence that we can measure these variables and place limits
 on how well we know them.
+
+[^3]: It cannot be *any* distribution but you'll learn the exceptions as
+    they come up.

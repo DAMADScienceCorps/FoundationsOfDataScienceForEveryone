@@ -1,6 +1,4 @@
-## Null Hypothesis Rejection Testing
-
-### Learning Questions {#learning-questions-2 .unnumbered}
+# Learning Questions
 
 -   What is the principle of falsifiability?
 
@@ -20,7 +18,7 @@
 
 -   What is the KS-Test?
 
-### Introduction {#introduction-2 .unnumbered}
+# Introduction
 
 The most basic formalism of science can be hastily distilled into one
 sentence: test an idea with data. That sentence does a lot of heavy
@@ -36,7 +34,7 @@ possible to contradict it. The canonical example of a falsifiable
 hypothesis is: "All swans are white." Simply observing one swan that is
 not white is enough to falsify this hypothesis.
 
-### The NHRT Algorithm {#the-nhrt-algorithm .unnumbered}
+# The NHRT Algorithm
 
 Let's construct an example to demonstrate how we test hypotheses.
 Consider a Bus that takes some route, Route $A$. The total trip duration
@@ -48,7 +46,7 @@ $B$. The bus company measured the total trip duration for Route $B$ 100
 times. Does this $N=100$ sample provide enough evidence to conclude that
 Route $B$ is faster than Route $A$?
 
-#### Step 1: Formulate The Prediction {#step-1-formulate-the-prediction .unnumbered}
+## Step 1: Formulate The Prediction
 
 We start by constructing a **null hypothesis** ($H_0$). This must be a
 falsifiable statement that represents something we seek to falsify. A
@@ -65,7 +63,7 @@ get more specific.
 Our goal with NHRT is to analyze our evidence and determine if we can
 *falsify* the premise set forth by the null hypothesis.
 
-#### Step 2: Identify All Alternative Outcomes {#step-2-identify-all-alternative-outcomes .unnumbered}
+## Step 2: Identify All Alternative Outcomes
 
 Next we construct the **alternative hypothesis** ($H_1$), which is the
 logical complement of the null hypothesis. If $H_0$ is "The world is not
@@ -90,7 +88,7 @@ $H_1$ is not strictly the complement of $H_0$ because it's a
 single-tailed alternative, but that's alright. However, this choice of
 directionality has important consequences for the test, as we will see.
 
-#### Step 3: Set a Confidence Threshold {#step-3-set-a-confidence-threshold .unnumbered}
+## Step 3: Set a Confidence Threshold
 
 The scientist must determine how much evidence they require in order to
 reject the null hypothesis. We set this threshold of evidence by stating
@@ -127,7 +125,7 @@ reject the null hypothesis when it's actually true.
 
 Let's choose $\alpha=0.05$ for this example.
 
-#### Step 4: Find a Pivotal Quantity with a Known Distribution Under $H_0$ {#step-4-find-a-pivotal-quantity-with-a-known-distribution-under-h_0 .unnumbered}
+## Step 4: Find a Pivotal Quantity with a Known Distribution Under $H_0$
 
 A **pivotal quantity** (or test statistic) is a function of the data
 whose probability distribution is known when $H_0$ is true. For our
@@ -151,10 +149,9 @@ $P_\mathcal{N}$. For example, if $Z$ is extracted from a Gaussian
 distribution with mean $\mu=0$ and standard deviation $\sigma=1$, and
 $Z>1$, we would know that the probability of getting $Z>1$ is
 $P(Z>1) = (100-68)/2 = 16$% (see
-[1.4](#fig:stddevs){reference-type="ref+label"
-reference="fig:stddevs"})!
+[1.4](#fig:stddevs))!
 
-#### Step 5: Calculate the Pivotal Quantity {#step-5-calculate-the-pivotal-quantity .unnumbered}
+## Step 5: Calculate the Pivotal Quantity
 
 Imagine that we calculate $\bar{X}$, which is the average of the 100
 Route $B$ trip durations and find that $\bar{X}=34.46\text{ min}$. We
@@ -168,7 +165,7 @@ $\mu_0$. That is to say that the Route $B$ trip durations are longer
 than the Route $A$ trip durations. Not good. But let's see if the
 statistic says this is significant compared to our confidence threshold.
 
-#### Step 6: Test the Data Against Alternative Outcomes {#step-6-test-the-data-against-alternative-outcomes .unnumbered}
+## Step 6: Test the Data Against Alternative Outcomes
 
 The **p-value**, $p$, is the probability, under the null hypothesis, of
 obtaining a test statistic at least as extreme as the one observed. That
@@ -207,13 +204,12 @@ while assuming the null is true. Second, failing to reject $H_0$ is not
 the same as accepting $H_0$. Absence of evidence is not evidence of
 absence; our sample may be too small to detect a small effect.
 
-#### The Cumulative Distribution Function {#the-cumulative-distribution-function .unnumbered}
+## The Cumulative Distribution Function
 
 The CDF is the integral of the PDF along the support or, in simpler
 terms, the CDF is the area beneath the PDF curve. So if you imagine the
 bell-shaped curve of the standard normal distribution
-([1.4](#fig:stddevs){reference-type="ref+label"
-reference="fig:stddevs"}), the CDF at some point $x$, $\Phi(x)$, is the
+([1.4](#fig:stddevs)), the CDF at some point $x$, $\Phi(x)$, is the
 area between the bell curve and the $x$-axis between $-\infty$ and $x$.
 In integral form, it looks like this:
 
@@ -223,9 +219,8 @@ where $f(x)$ is the PDF and $x'$ is a dummy variable for integration.
 
 ![Two cumulative distribution functions of a Gaussian distribution with
 different mean and standard deviation. See
-[1.3](#fig:gaussian){reference-type="ref+label"
-reference="fig:gaussian"} for the corresponding
-PDFs.](figures_pedagogy/gaussian_cdf.pdf){#fig:cdf width="100%"}
+[1.3](#fig:gaussian) for the corresponding
+PDFs.](../figures_pedagogy/gaussian_cdf.pdf)
 
 What does the CDF tell us? The CDF evaluated at some point, $x$, is the
 probability that our random process will take on a value that is less
