@@ -318,33 +318,3 @@ Use Slack for primary communication. I will use Slack for general announcements,
 
 For every homework I will open a slack channel labeled #hwX where X is the homework number (from 1 to 12 typically). Post homework questions there. If the question requires sharing code or solutions DM me first.
 
-### Student Wellbeing
-
-College students often experience things that may interfere with academic success such as stress, physical illness, sleep problems, juggling responsibilities, life events, relationship concerns, or feelings of anxiety, hopelessness, or depression. If you are experiencing any of the above in a way that is negatively impacting your ability to participate fully in the learning activities for this class, I strongly encourage you to get in touch with me.
-
-**Contact me:** If you are struggling with this class or anticipate the need to miss class for a health-related reason, please check-in during office hours or contact me
-
-
-
----
-
-### UD Academic Policies
-
-**The Safety of Our Learning Environment**  
-Student learning can only occur when students and their instructors feel safe, respected, and supported by each other.
-
-**Academic Honesty**  
-Please familiarize yourself with UD policies regarding academic dishonesty. The Academic Honesty Policy states: *"Students must be honest and forthright in their academic studies. Students are expected to do their own work and must give proper credit for any work not their own. Students may neither give nor receive unauthorized assistance. Engaging in academic dishonesty, or allowing other students to do the same, corrupts the educational process and diminishes the quality of a University of Delaware degree."*
-
-**Unauthorized Recording and Intellectual Property**  
-In accordance with the Student Guide to University Policies, students are prohibited from (1) unauthorized recording, entirely or in part, of any class, and (2) posting of notes, study guides, exams, answer keys or any other materials from a class (whether the student is enrolled in the class or not) on the Internet, whether or not for a fee, without express permission from the faculty member.
-
-**Harassment, Discrimination, and Sexual Misconduct**  
-The University of Delaware works to promote an academic and work environment that is free from all forms of discrimination, including harassment and sexual misconduct. Please familiarize yourself with this policy at the University's Office of Equity & Inclusion's website. You can report any concerns to the University's Office of Equity & Inclusion (302) 831-8063 or at kbuchko@udel.edu.
-
-**Responsible Employee Disclosure Statement**  
-As a University employee, I must report any alleged violation of the Non-Discrimination, Sexual Misconduct and Title IX Policy.
-
-**Accommodations for Students with Disabilities**  
-Any student who may need disability-related accommodations should contact the Office of Disability Support Services (D
- 
