@@ -108,7 +108,7 @@ $$\label{eq:X1}
 We can put all this together now in one beautiful equation:
 
 $$\begin{aligned}
-    \label{eq:linearmodel1}
+    \label{eq:linearmodel01}
     \mathbf{y} &= \mathbf{X} \boldsymbol{\beta} \\
     \label{eq:linearmodel2}
     \begin{bmatrix}
@@ -129,7 +129,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 With great pleasure, allow me to introduce to you the **linear model**
-[\[eq:linearmodel1\]](#eq:linearmodel1). With this equation, we can now express a
+[\[eq:linearmodel1\]](#eq:linearmodel01). With this equation, we can now express a
 linear model for any number of features! This is the key to multiple
 linear regression. If you aren't familiar with linear algebra, it may
 not yet be clear how this is useful to us. I'm sure you agree that the
