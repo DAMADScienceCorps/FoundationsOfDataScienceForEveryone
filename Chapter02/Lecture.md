@@ -1,6 +1,6 @@
 # Lesson 2: Probability and Statistics
 
-# Learning Questions
+## Learning Questions
 
 -   What does it mean to 'explore' data?
 
