@@ -28,6 +28,24 @@ finds structure within unlabeled data. It partitions data points into
 groups (clusters) such that points within the same cluster are similar
 to each other, and points in different clusters are dissimilar.
 
+It gets more intuitive if you think about this in space. 
+Then your features are positions along different directions (although it will
+be important to be able to abstract the concepts we study to a space of 
+features that are not positions!). Think for example of flowers in a front yard - 
+you want to set up your irrigation system. 
+You may want identify groups of flowers, or clusters, based on where the flowers are and put a sprinkler
+in the center of each cluster. This way all flowers get water with the smallest number of sprinklers!
+
+
+![A visualization of the clustering in 2D. ](../figures_pedagogy/kmeansclustering.png)
+
+There will be questions tho: how can I tell where groups separate or how many groups I have, 
+if the flowers are uneven in density what
+is the "center" (best point to put the sprinklers)? 
+And maybe these are different plants that require different amounts of water, now we are stepping
+away from a purely spatial example and things may get more complicated, but all the principles and mathematical
+formulations we are about to discuss will hold in a spatial and non spatial framework.
+
 In this lesson, we will cover three major clustering methods: $k$-means,
 DBSCAN and agglomerative clustering. Before we begin, recall the four
 types of data: NOIR. Clustering requires a definition of similarity or
