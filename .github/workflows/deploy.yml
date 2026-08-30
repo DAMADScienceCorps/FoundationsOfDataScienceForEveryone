@@ -1,0 +1,57 @@
+name: Deploy MyST site to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install MyST
+        run: npm install -g mystmd
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build HTML Assets
+        run: myst build --html
+        env:
+          # This tells MyST the site is served from a subpath if this is a project page
+          # e.g. https://<user>.github.io/<repo>/ instead of a user/org page.
+          # Uncomment and set if needed:
+          # BASE_URL: /FoundationsOfDataScienceForEveryone
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_build/html"
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
