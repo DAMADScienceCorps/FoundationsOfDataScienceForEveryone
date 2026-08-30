@@ -147,7 +147,7 @@ Students will have a strong grasp of descriptive statistics, AI methodology and 
 
 There are several useful textbooks BUT one or even all of them do not replace learning from lectures and lecture slides.
 
-**Lecture notes are available at:** https://github.com/FoxFortino/SaturnineQuail-pedagogy
+**Lecture notes are available at:** https://github.com/DAMADScienceCorps/FoundationsOfDataScienceForEveryone
 
 ### The most helpful textbooks are:
 
