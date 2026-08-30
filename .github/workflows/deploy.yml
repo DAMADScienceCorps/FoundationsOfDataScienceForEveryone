@@ -34,11 +34,6 @@ jobs:
 
       - name: Build HTML Assets
         run: myst build --html
-        env:
-          # This tells MyST the site is served from a subpath if this is a project page
-          # e.g. https://<user>.github.io/<repo>/ instead of a user/org page.
-          # Uncomment and set if needed:
-          # BASE_URL: /FoundationsOfDataScienceForEveryone
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
