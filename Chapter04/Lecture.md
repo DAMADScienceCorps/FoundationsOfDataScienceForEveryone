@@ -1,4 +1,6 @@
-# Learning Questions
+#  Lesson 4: The p-value Framework
+
+## Learning Questions
 
 -   What is the principle of falsifiability?
 
