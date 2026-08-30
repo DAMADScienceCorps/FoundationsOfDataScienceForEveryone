@@ -1,4 +1,4 @@
-# Multivariate linear and Logistic Regression
+# Lesson 6: Multivariate linear and Logistic Regression
 
 ## Learning Questions
 
