@@ -43,16 +43,15 @@ with. The NOIR taxonomy classifies data into four levels of measurement.
 Each level supports different mathematical operations, and using the
 wrong operation on the wrong type of data leads to nonsense.
 
-::: {#tab:noir}
-              Order   Distance   Mean   Median   Mode   Absolute Zero
-  ---------- ------- ---------- ------ -------- ------ ---------------
-   Nominal      x                         x            
-   Ordinal      x                         x       x    
-   Interval     x        x        x       x       x    
-    Ratio       x        x        x       x       x           x
+```{table}  NOIR data. The four types of data and their features
+  |          |  Order   |Distance  | Mean |  Median |  Mode |  Absolute Zero|
+  |----------|----------|----------|------|---------|-------|---------------|
+  | Nominal  |    x     |          |      |    x    |       |               |
+  | Ordinal  |    x     |          |      |    x    |   x   |               | 
+  | Interval |    x     |   x      |  x   |    x    |   x   |               |
+  |  Ratio   |    x     |   x      |  x   |    x    |   x   |        x      |
 
-  : NOIR data. The four types of data and their features.
-:::
+```
 
 **Nominal data** consist of unordered categories. Colors are nominal.
 Bus route numbers are nominal. You can't say one color is "more" than
