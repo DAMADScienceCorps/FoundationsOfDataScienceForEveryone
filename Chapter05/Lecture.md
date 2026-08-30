@@ -452,7 +452,7 @@ the gradient. Let's try $x=-2$. The gradient is $f'(x=-2)=-4$, negative,
 which means we should increase our parameter.
 
 In a 2D parameter space ($f(x,y)$), can visualize your objective function as a topology or landscape.
-You are starting in some (random) poisition on the landscape, there are peaks and valleys, 
+You are starting in some (random) position on the landscape, there are peaks and valleys, 
 and you want to get to the lowest elevation point without getting trapped in a valley.
 
 ![4-fold validation visualization](../figures_pedagogy/gradient_descent_3d.png)
