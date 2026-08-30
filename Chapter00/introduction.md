@@ -1,3 +1,13 @@
+# Pedagogy 
+
+*The following material is currently unpublished, but it is shared
+publicly in a dedicated repository[^1]. Our team (Dr. Willow Fox Fortino, Dr. Federica
+Bianco, and Dr. Farid Qamar, who co-taught the course in 2024) is in
+discussion with publishers (Princeton Press) to gauge their interest in
+turning these teaching materials into an undergraduate level textbook.*
+
+## Introduction 
+
 Data science has become an essential skill across all scientific disciplines [1][2][3][4][5][6][7][8][9][10][11][12]. The ability to analyze data, build models, and interpret results is no longer the exclusive purview of statisticians and computer scientists. These skills are increasingly expected of researchers and students in physics and astronomy, and any discipline that deals with data. Students arrive in the classroom with diverse academic backgrounds [9][13], widely varying levels of mathematical preparation and often only a modicum of programming experience or less; thus, the question asks itself: "How do you teach data science?"
 
 ### Context
