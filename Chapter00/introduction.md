@@ -1,9 +1,9 @@
 # Pedagogy 
 
 *The following material is currently unpublished, but it is shared
-publicly in a dedicated repository[^1]. Our team (myself, Dr. Federica
+publicly in a dedicated repository[^1]. Our team (Dr. Willow Fox Fortino, Dr. Federica
 Bianco, and Dr. Farid Qamar, who co-taught the course in 2024) is in
-discussion with publishers ( Princeton Press) to gauge their interest in
+discussion with publishers (Princeton Press) to gauge their interest in
 turning these teaching materials into an undergraduate level textbook.*
 
 ## Introduction 
@@ -26,25 +26,15 @@ you teach data science?"
 ### Context
 
 The course "Foundations of Data Science for Everyone" (hereafter FDSE)
-was developed under National Science Foundation (NSF) award 2123264
+was developed under National Science Foundation (NSF) award IIS 2123264
 "Collaborative Research: HDR DSC: Delaware and Mid-Atlantic Data Science
-Corps" (P.I. Bianco) to expand data science education at Lincoln
+Corps" (P.I. Bianco) to expand undergraduate data science education at 
+the University of Delaware, Lincoln
 University of Pennsylvania and Delaware State University. The materials
 presented in this chapter represent the culmination of several years of
-development. I first encountered this course as a teaching assistant,
-supporting Dr. Federica Bianco on this course for two semesters. I also
-served as her teaching assistant for a more advanced course covering
-similar material, "Data Science for Physical Scientists." These courses
-gave me considerable experience on the 'other side' of the classroom,
-which has let me develop my own professional opinions about teaching.
-The opportunity arose for me to be the primary instructor for this
-course in the Fall of 2025. During my time as professor, I refined and
-personalized the materials based on my cumulative experience as a
-student, emphasizing accessibility, clarity and conceptual depth.
+development. 
 
-This chapter presents the pedagogical materials ( written lectures,
-assignments and two exams) developed for FDSE. The course was designed
-for a broad audience; students from any major were welcome to attend.
+The course was designed for a broad audience; students from any major were welcome to attend.
 The goal was not to produce a professional data scientist in four
 months, but rather to equip students with the conceptual knowledge base
 and practical skills necessary to engage with data in their own
@@ -53,9 +43,9 @@ disciplines and, above all else, the ability to teach themselves.
 ### Philosophy
 
 The design of this course has several guiding principles, each one
-rooted in my experience teaching students and being a student. The first
+rooted in our experience teaching students and being a student. The first
 is that **practice is essential** to understanding. The process of
-understanding an idea has several stages, by my own reckoning: ability
+understanding an idea has several stages, by our own reckoning: ability
 to recite the idea upon prompting; ability to recite the idea without
 prompting; ability to teach the idea to a peer; ability to use the idea
 to create new ideas; ability to teach the idea to a non-peer. Each of
@@ -68,7 +58,8 @@ themselves**. Collective human knowledge is an ever-changing landscape,
 and a student's position in that landscape usually starts at the bottom
 of a valley --- their sight obscured by hills and mountains, trees and
 bushes. Our job as a teacher is to help the student out of one valley so
-they might know how to escape the next one on their own.
+they might know how to escape the next one on their own. 
+Effectively, this means our overarching goal will be to teach critical thinking skils.
 
 And at last, a teacher must always ask themselves: **"What does my
 student *not* know?"** The most severe barrier to effective teaching I
@@ -76,8 +67,7 @@ have seen is an instructor with an unyielding perspective. From moment
 to moment or from semester to semester, a teacher must always evaluate
 their instruction from the perspective of their student.
 
-While I highlighted these three principles derived from my own
-experience as a student and a teacher, there is a wealth of pedagogical
+There is a wealth of pedagogical
 literature that supports their value. For example, there are innumerable
 studies done on the importance of practice as a part of learning
 [@kang_cultivating_2026; @alzen_training_2024; @dickson_active_2026; @powell_essential_2023; @liu_algebra_2025; @mikula_framework_2017],
@@ -94,11 +84,10 @@ understand what it was once like to not be an expert
 
 ### The theoretical framework of Cognitive Apprenticeship Theory
 
-Teaching Data Science is particularly well-suited to applications of
-active learning [@bonwell1991active] and, more specifically, to
+Teaching Data Science is particularly well-suited discipline to the applications of
+active learning [@bonwell1991active] and 
 Cognitive Apprenticeship Theory [@collins2018cognitive]. Since it deals
-with teaching methods for problem-solving in a domain-nonspecific
-fashion, it is suited to be taught with direct involvement and intense
+with teaching methods for problem-solving, it is suited to be taught with direct involvement and intense
 use of practical tasks. Given that it is not domain-specific, data can
 be chosen to resonate with phenomena relevant to students' lives.
 
@@ -113,9 +102,9 @@ must be designed around four key dimensions: [@collins2018cognitive].
     "tricks of the trade"---heuristic strategies, control strategies for
     managing one's own thinking, and learning strategies for acquiring
     new knowledge**. All this is taught in FDSE by showing the process
-    of data science via live coding. For each topic ( tree methods) the
+    of data science via live coding. For each topic (e.g., tree methods) the
     instructor reviews the method from a high-level theoretical
-    perspective, first conceptually ( "A decision tree is a kind of
+    perspective, first conceptually (e.g., "A decision tree is a kind of
     flowchart, where each internal node represents a test --- a question
     --- on a feature," see
     [\[sec:pedagogy:trees\]](#sec:pedagogy:trees){reference-type="ref+label"
