@@ -1,5 +1,7 @@
+
 # Class notes for Foundations of Data Science for Everyone. 
 
+# SAMPLE SYLLABUS
 
 Foundations of Data Science for Everyone is an experimental class taught jointly at the University of Delaware and Lincoln University of PA. The target audience are undergraduates in and out of STEM. The class aims at providing a conceptual understanding of AI and Data Science, mastery in the use of computational tools for data managing and handling, and familiarity with common models for the extraction of information from data. 
 
@@ -56,7 +58,9 @@ Diversity is considered a resource that enriches us culturally and intellectuall
 **READ THE FULL CODE OF CONDUCT**  
 FDSFE COC
 
----
+=======
+
+
 
 ## Table of Contents
 
@@ -217,6 +221,7 @@ Each week you will attend two classes, which will be a mix of lectures and hands
 
 ### Homework
 
+
 Weekly assignments will be handed out at the end of the class and will be due strictly before the first class of the following week (no submissions at all can be accepted after that as the homework may be reviewed in class).
 
 Late homework will not be accepted. A single 72-hour exception is allowed throughout the semester, explicitly declare that you are going to use it before the deadline, and do use it wisely. The lowest grade in the first half of the course (before midterm) and the lowest grade in the second half will be disregarded in assigning you a final grade. If you fail to turn in an assignment that will be a 0, and (likely) the lowest grade. This means you will lose the chance to disregard your worst performance.
@@ -286,7 +291,6 @@ Following SMART (Specific, Measurable, Attainable, Relevant, Timely) teaching pr
 
 **Professional Conduct**
 
-- Adhere to the University of Delaware Code of Conduct
 - Be punctual (at the start of the class there will be quizzes, if you miss them because you are late you will NOT be given a make-up opportunity)
 - Complete all reading and homework assignments
 - Be respectful of your peers and instructor
