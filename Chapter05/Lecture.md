@@ -167,7 +167,7 @@ $y = mx + b$.
 
 ![A collection of data points spread out in a rough line is approximated
 by a linear model. In this case, the parameters of the model are $m=1$
-and $b=0$.](../figures_pedagogy/linearmodel.pdf.ng)
+and $b=0$.](../figures_pedagogy/linearmodel.pdf.png)
 
 **Step 2:** Optimize an **objective function** (also called a loss
 function) that quantifies how well the model fits the data. Consider the
