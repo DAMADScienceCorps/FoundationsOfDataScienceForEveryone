@@ -190,8 +190,11 @@ outliers, but it struggles when clusters have different densities, and
 it is very sensitive to the choice of epsilon and `min_samples`.
 
 ![A visualization of the first step in DBSCAN: identifying a core cluster](../figures_pedagogy/dbscan1.png)
+
 ![A visualization of the first step in DBSCAN: identifying the extent of a cluster](../figures_pedagogy/dbscan2.png)
+
 ![A visualization of the first step in DBSCAN: a second cluster](../figures_pedagogy/dbscan3.png)
+
 ![A visualization of the first step in DBSCAN: identifying outliners](../figures_pedagogy/dbscan4.png)
 
 
