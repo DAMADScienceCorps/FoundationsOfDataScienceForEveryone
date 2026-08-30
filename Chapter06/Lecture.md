@@ -108,7 +108,6 @@ $$%\label{eq:X1}
 We can put all this together now in one beautiful equation:
 
 $$\begin{aligned}
-    %\label{eq:linearmodel01}
     \mathbf{y} &= \mathbf{X} \boldsymbol{\beta} \\
     \label{eq:linearmodel2}
     \begin{bmatrix}
@@ -148,8 +147,7 @@ There is an analytic solution for the best parameters
 $\boldsymbol{\beta}$, that minimize $SSE$. Just like the last lesson,
 this solution is called the ordinary least squares solution:
 
-$$\label{eq:ols}
-    \boldsymbol{\beta} = (\mathbf{X}^\intercal \mathbf{X})^{-1} \mathbf{X}^\intercal \mathbf{y}$$
+$$\boldsymbol{\beta} = (\mathbf{X}^\intercal \mathbf{X})^{-1} \mathbf{X}^\intercal \mathbf{y}$$
 
 We know $\mathbf{X}$, it's just the design matrix which is just our
 features from our data. We know $\mathbf{y}$, it's just the targets in
@@ -189,8 +187,7 @@ way that linear regression was all about the linear function. The
 logistic function ([1.7](#fig:logistic)) has quite an unusual form, both
 mathematically and graphically:
 
-$$\label{eq:logistic}
-    \sigma(x)=\frac{1}{1+e^{-x}}$$
+$$\sigma(x)=\frac{1}{1+e^{-x}}$$
 
 ![The logistic
 function.](../figures_pedagogy/Logistic-curve.svg.png)
@@ -230,8 +227,7 @@ model a probabilistic classification, and this is why logistic
 The objective function we'll use is called the **logistic loss** or
 simply log loss.[^13]
 
-$$\label{eq:logloss}
-    \ell = \sum_{i=1}^n (y_i \ln(p_i) + (1-y_i)\ln(1-p_i))$$
+$$\ell = \sum_{i=1}^n (y_i \ln(p_i) + (1-y_i)\ln(1-p_i))$$
 
 where $\ell$ is the log loss, $n$ is the number of observations, $y_i$
 is the $i$-th target (0 or 1), and $p_i$ is the probabilistic
