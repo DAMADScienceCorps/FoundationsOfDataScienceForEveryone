@@ -97,7 +97,7 @@ just for one target $y_i$, but for every target $\mathbf{y}$. To do this
 we need to define $\mathbf{X}$, the "design matrix," "model matrix" or
 "regressor matrix."
 
-$$\label{eq:X}
+$$\label{eq:X1}
     \mathbf{X} = 
     \begin{bmatrix}
         1 & T_1 & H_1 \\
