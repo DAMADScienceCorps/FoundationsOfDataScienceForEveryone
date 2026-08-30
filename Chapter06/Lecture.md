@@ -27,10 +27,16 @@ last time with some new notation that we can more easily expand the
 concept to multiple linear regression. This lesson will make use of some
 simple vector and matrix arithmetic. To start with, we will now refer to
 our parameters as a vector
-$\boldsymbol{\beta}=[\beta_0,\beta_1,...,\beta_p]$. We will also refer
-to our set of observations --- our features and targets --- like so:
-$\{\mathbf{x}_i,y_i\}_{i=1}^n$, where the vector
-$\mathbf{x}_i=[x_{i1},x_{i2},...,x_{ip}]$ represents the observation of
+$\vec{\beta}=[\beta_0,\beta_1,...,\beta_p]$. We will also refer
+to our set of observations --- our features and targets --- like so: 
+
+$${\lbrace \vec{x}_i,y_i \rbrace}_{i=1}^n,$$
+
+where the vector
+
+$$\vec{x}_i=[x_{i1},x_{i2},...,x_{ip}]$$ 
+
+represents the observation of
 $p$ features for observation $i$.[^10] We can also write our vector of
 targets as $\mathbf{y}=[y_1,y_2,...,y_n]$.
 
@@ -108,7 +114,7 @@ $$%\label{eq:X1}
 We can put all this together now in one beautiful equation:
 
 $$\begin{aligned}
-    \mathbf{y} &= \mathbf{X} \boldsymbol{\beta} \\
+    \mathbf{y} &= \mathbf{X} \vec{\beta} \\
     %\label{eq:linearmodel2}
     \begin{bmatrix}
         y_1 \\
@@ -132,22 +138,25 @@ linear model for any number of features! This is the key to multiple
 linear regression. If you aren't familiar with linear algebra, it may
 not yet be clear how this is useful to us. I'm sure you agree that the
 equation is beautiful, but the whole point of machine learning is that
-we need to find those parameters, $\boldsymbol{\beta}$!
+we need to find those parameters, $\vec{\beta}$!
 
 Let's rewrite the sum of squared errors (SSE) with our new notation.
+
 $$\begin{aligned}
     SSE_i &= \sum_{i=1}^n (y_i - \hat{y}_i)^2 \\
-    SSE &= ||\mathbf{y}-\mathbf{X}\boldsymbol{\beta}||^2
-\end{aligned}$$ where the
-$\hat{y}_i=\mathbf{x_i}\cdot\boldsymbol{\beta}$ is the **estimator** for
+    SSE &= ||\mathbf{y}-\mathbf{X}\vec{\beta}||^2
+\end{aligned}$$ 
+
+where the
+$\hat{y}_i=\mathbf{x_i}\cdot\vec{\beta}$ is the **estimator** for
 $y_i$. In other words, $y_i$ is the $i$-th observation of our target and
 $\hat{y}_i$ is what our model predicts for $y_i$.
 
 There is an analytic solution for the best parameters
-$\boldsymbol{\beta}$, that minimize $SSE$. Just like the last lesson,
+$\vec{\beta}$, that minimize $SSE$. Just like the last lesson,
 this solution is called the ordinary least squares solution:
 
-$$\boldsymbol{\beta} = (\mathbf{X}^\intercal \mathbf{X})^{-1} \mathbf{X}^\intercal \mathbf{y}$$
+$$\vec{\beta} = (\mathbf{X}^\intercal \mathbf{X})^{-1} \mathbf{X}^\intercal \mathbf{y}$$
 
 We know $\mathbf{X}$, it's just the design matrix which is just our
 features from our data. We know $\mathbf{y}$, it's just the targets in
@@ -156,9 +165,13 @@ do multiple linear regression. Congratulations!
 
 ## Notation
 
-Notice how I denote a vector with a bold lowercase letter (
-$\mathbf{x}_i$, $\mathbf{y}$, $\boldsymbol{\beta}$), I delimit vectors
-with brackets ( $\boldsymbol{\beta}=[\beta_0,\beta_1,...,\beta_p]$,
+Notice how I denote a vector with an arrow  letter:
+
+$$\vec{x}_i, \vec{y}, \vec{\beta}$$, 
+
+(also it could be a bold case letter but that does not render so well in github pages equations).
+I delimit vectors
+with brackets ( $\vec{\beta}=[\beta_0,\beta_1,...,\beta_p]$,
 $\mathbf{x}_i=[x_{i1},x_{i2},...,x_{ip}]$,
 $\mathbf{y}=[y_1,y_2,...,y_n]$), I delimit sets with braces (
 $\{\mathbf{x}_i,y_i\}_{i=1}^n$), and I denote matrices as bold capital
@@ -200,7 +213,7 @@ function, but we can create a logistic model by introducing some
 parameters:
 
 $$p(x)=\frac{1}{1+e^{-(\beta_0 + \beta_1 \cdot x + \ldots)}}$$ where the
-parameter vector $\boldsymbol{\beta}$ and the design matrix $\mathbf{X}$
+parameter vector $\vec{\beta}$ and the design matrix $\mathbf{X}$
 makes a return.
 
 We need an objective function for this new model so we can figure out
@@ -235,8 +248,8 @@ classification from the logistic model (between 0 and 1).
 
 Unfortunately, there is no analytic solution like there is for the
 linear model; I cannot write an equation that starts with
-$\boldsymbol{\beta}=$, which is spiritually devastating. Must we
-determine $\boldsymbol{\beta}$ by "brute force"? Checking every
+$\vec{\beta}=$, which is spiritually devastating. Must we
+determine $\vec{\beta}$ by "brute force"? Checking every
 combination of our parameters until we find a good result? In the last
 lesson we discussed optimization schemes, so no. But for now, yes, we
 will find our parameters by brute force.[^14]
