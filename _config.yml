@@ -1,0 +1,26 @@
+title: "Foundations of Data Science for Everyone"
+author: "Willow Fox Fortino and Federica Bianco"
+logo: "figures_pedagogy/Colored_neural_network.svg.png"
+copyright: "2025"
+only_build_toc_files: true
+
+execute:
+  execute_notebooks: "off"
+
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+  extra_footer: |
+    <p>
+    Foundations of Data Science for Everyone - University of Delaware
+    </p>
+
+repository:
+  url: "https://github.com/DAMADScienceCorps/FoundationsOfDataScienceForEveryone"
+  path_to_book: ""
+  branch: "main"
+
+launch_buttons:
+  binderhub_url: ""
+  colab_url: "https://colab.research.google.com"

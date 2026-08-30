@@ -1,0 +1,46 @@
+format: jb-book
+root: intro.md
+parts:
+  - caption: Python Programming
+    chapters:
+      - file: Chapter01/Lesson1_Python101.ipynb
+  - caption: Data Exploration
+    chapters:
+      - file: Chapter02/Lesson2_DataExploration.ipynb
+  - caption: Statistics
+    chapters:
+      - file: Chapter03/Lesson3_Statistics.ipynb
+  - caption: Null Hypothesis Testing
+    chapters:
+      - file: Chapter04/Lesson4.1_NHRT.ipynb
+      - file: Chapter04/Lesson4.2_NHRT.ipynb
+  - caption: Introduction to Machine Learning
+    chapters:
+      - file: Chapter05/Untitled.ipynb
+  - caption: Regression
+    chapters:
+      - file: Chapter06/Lesson5.1_LinearRegression.ipynb
+      - file: Chapter06/Lesson5.2_MultipleLinearRegression.ipynb
+      - file: Chapter06/Lesson6_LogisticRegression.ipynb
+  - caption: Tree Models
+    chapters:
+      - file: Chapter07/Lesson7.1_Classification.ipynb
+      - file: Chapter07/Lesson7.2_TitanicDataset.ipynb
+  - caption: Clustering
+    chapters:
+      - file: Chapter08/Lecture.md
+  - caption: Neural Networks
+    chapters:
+      - file: Chapter09/Lesson9.1_ANN_MNIST.ipynb
+      - file: Chapter09/Lesson9.2_ANN_iris.ipynb
+      - file: Chapter09/Lesson9.3_CNN_MNIST.ipynb
+  - caption: Generative AI
+    chapters:
+      - file: Chapter10/Lesson10.1_VAE.ipynb
+      - file: Chapter10/Lesson10.2_Superresolution.ipynb
+  - caption: Assessments
+    chapters:
+      - file: Midterm/intro.md
+      - file: Midterm/midterm.ipynb
+      - file: Final/intro.md
+      - file: Final/final.ipynb
