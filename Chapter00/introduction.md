@@ -1,4 +1,4 @@
-# Pedagogy {#ch:pedagogy}
+# Pedagogy 
 
 *The following material is currently unpublished, but it is shared
 publicly in a dedicated repository[^1]. Our team (myself, Dr. Federica
@@ -6,14 +6,9 @@ Bianco, and Dr. Farid Qamar, who co-taught the course in 2024) is in
 discussion with publishers ( Princeton Press) to gauge their interest in
 turning these teaching materials into an undergraduate level textbook.*
 
-## Introduction {#ch:pedagogy:intro}
+## Introduction 
 
 ### Motivation
-
-The previous chapters of this dissertation have focused on the
-development and application of machine learning methods for supernova
-classification. This chapter departs from direct astrophysical research
-to address a complementary endeavor: teaching data science.
 
 Data science has become an essential skill across all scientific
 disciplines
