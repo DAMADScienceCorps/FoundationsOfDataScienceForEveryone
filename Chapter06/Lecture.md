@@ -271,17 +271,16 @@ four new features, we input a 1 in the corresponding column.
 [1.3](#tab:onehot)
 shows what this would look like in a tabular dataset.
 
-::: {#tab:onehot}
-   Blood Type   Blood Type: A   Blood Type: B   Blood Type: AB   Blood Type: O
-  ------------ --------------- --------------- ---------------- ---------------
-       A              1               0               0                0
-       B              0               1               0                0
-       AB             0               0               1                0
-       O              0               0               0                1
+```{table} An example of one-hot encoding.
+:label: tab:onehot
 
-  : An example of one-hot encoding.
-:::
-
+| Blood Type | Blood Type: A | Blood Type: B | Blood Type: AB | Blood Type: O |
+|------------|---------------|---------------|-----------------|----------------|
+| A          | 1             | 0             | 0               | 0              |
+| B          | 0             | 1             | 0               | 0              |
+| AB         | 0             | 0             | 1               | 0              |
+| O          | 0             | 0             | 0               | 1              |
+```
 ## Min-Max Normalization
 
 Min-max normalization is a simple process that scales all numeric
