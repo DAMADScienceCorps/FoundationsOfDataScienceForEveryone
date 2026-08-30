@@ -6,7 +6,7 @@ project:
   description: An introductory data science course.
   # keywords: []
   authors: []
-  github: https://github.com/FoxFortino/SaturnineQuail-pedagogy
+  github: https://github.com/DAMADScienceCorps/FoundationsOfDataScienceForEveryone
   toc:
     - file: README.md
 
