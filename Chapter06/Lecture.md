@@ -16,11 +16,11 @@ $x$ and we have some target $y$, and we believe there is a linear
 relationship between them, then we can use the linear model to predict
 $y$ based on $x$. This is called **simple linear regression** because
 there is one feature, $x$. When there is more than one feature that we
-want to use in our model, but we still want the model to be linear ( we
-never exponentiate $x$), that is called **multiple linear regression**
+want to use in our model, but we still want the model to be linear (e.g. we
+never exponentiate $x$), that is called **multivariate linear regression**
 (also sometimes called *multilinear* regression).
 
-# Regression: Multiple Linear Regression
+# Regression: Multivariate Linear Regression
 
 This lesson will formalize the simple linear regression we talked about
 last time with some new notation that we can more easily expand the
