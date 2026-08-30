@@ -1,4 +1,6 @@
-# Learning Questions
+# Leson 6: Multivariate linear and Logistic Regression
+
+## Learning Questions
 
 -   What is multiple linear regression?
 
