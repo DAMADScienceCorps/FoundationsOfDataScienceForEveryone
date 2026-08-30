@@ -1,4 +1,8 @@
-# Learning Questions
+# Lesson 7: Classification and Regression Trees
+
+## Learning Questions
+
+-   What is the advantage of a non linear model?
 
 -   What is a decision tree?
 
@@ -12,12 +16,29 @@
 
 # Introduction
 
+Let's remind ourselves what is the overall goal we are pursuing: **We want to relate features we can observe (inputs) with outcomes 
+we want to predict (targets)**, either because we are interested in that prediction (e.g., we want to predict average temperatures 
+in the next 10 years to mitigate global warming causes) or because we want to understand the relationship (we wan't to know how the 
+age of a star relates to its brightness, because humans have an innate intellectual curiosity to ouderstand the Universe we live in).
+
+
+So far we have worked on "linear models". This does not just mean fitting lines to data, they can 
+be curves, but they have a polynomial functional form ($y=ax+b$, $y = a\vec{x} + b$, $y = ax_1^2 + bx_2 + c$, etc...)
+Most phenomena, tho, don't relate so simply to each other. 
+A lot of machine learning focuses on figuring out how we can build models (mathematical descriptions of relations between inputs and outputs)
+that are more "adaptable" 
+to different and complex relationships between inputs and outputs (features and targets). The risk is that if you 
+allow a model to have too much flexibility, your model may lose meaning, and just adapt to peculiarities of
+the data in hand, rather than reproducing global relationships between inputs and outputs. If that is the case, 
+you may believe you have a solution for global warming when you actually don't!
+
+
 Decision trees are among the most intuitive and interpretable types of
 machine learning models. They mimic the way humans make decisions: by
 asking a series of questions, each of which narrows down the
 possibilities until a conclusion is reached. But despite their
 simplicity, decision trees are also among the most successful types of
-models, seeing widespread use in all disciplines.
+models, seeing widespread use in all disciplines. That is precisely because they are highly non-linear.
 
 # The Decision Tree
 
