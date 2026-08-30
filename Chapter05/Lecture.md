@@ -450,6 +450,20 @@ we should decrease our parameter to move in the opposite direction of
 the gradient. Let's try $x=-2$. The gradient is $f'(x=-2)=-4$, negative,
 which means we should increase our parameter.
 
+![4-fold validation visualization](../figures_pedagogy/gradient_descent_.png)
+
+
+Once we have the gradient, we know whether to increase or decrease our
+parameters, but by how much? This **step size** is controlled by the
+**learning rate** hyperparameter. A small learning rate means you make1d
+small changes to your parameter in proportion to the gradient, and a big
+learning rate means you make big changes to the parameter in proportion
+to the gradient. Small learning rates mean your optimizer will be
+cautious and slow. Large learning rates mean your optimizer will be
+risky (you may overshoot the minimum), but fast. Choosing the right
+learning rate requires you to balance your desire for speed and
+algorithm stability.
+
 In a 2D parameter space ($f(x,y)$), can visualize your objective function as a topology or landscape.
 You are starting in some (random) position on the landscape, there are peaks and valleys, 
 and you want to get to the lowest elevation point without getting trapped in a valley.
@@ -462,19 +476,6 @@ generally speaking by deciding at each position in which direction to take the n
 with stochastic gradient descent)
 
 ![4-fold validation visualization](../figures_pedagogy/gradient_descent_path.png)
-
-
-
-Once we have the gradient, we know whether to increase or decrease our
-parameters, but by how much? This **step size** is controlled by the
-**learning rate** hyperparameter. A small learning rate means you make
-small changes to your parameter in proportion to the gradient, and a big
-learning rate means you make big changes to the parameter in proportion
-to the gradient. Small learning rates mean your optimizer will be
-cautious and slow. Large learning rates mean your optimizer will be
-risky (you may overshoot the minimum), but fast. Choosing the right
-learning rate requires you to balance your desire for speed and
-algorithm stability.
 
 Gradient descent works well, but it requires you to calculate the
 objective function on the entire training set at each step. **Stochastic
