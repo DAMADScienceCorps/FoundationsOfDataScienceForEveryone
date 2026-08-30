@@ -1,6 +1,8 @@
-#  Lesson 3: Distributions
+#  Lesson 3: Statistical Distributions
 ## Learning Questions
 
+-   Why do distributions have to do with Data Science?
+  
 -   What is a distribution?
 
 -   What is a 'moment' of a distribution?
@@ -12,6 +14,14 @@
 -   What is the Central Limit Theorem?
 
 # Introduction
+
+Life is complicated. One way in which this manifests is that there are rarely two identical 
+realization of the same phenomenon: two identical leaves, two rods of identical length, two cars that are 
+the same model and year but that actually perform the same...
+
+There is some randomness in all processes that generates "values" 
+(measurable properties of things) not identically but as *distributions*.
+
 
 Data in the real world (, data not generated for the purpose of
 learning) emerge as observations drawn from underlying *distributions.*
