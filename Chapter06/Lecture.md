@@ -268,11 +268,10 @@ The answer is a process called **one-hot encoding.** We expand the
 "Blood Type" feature into four different features: "Blood Type: A,"
 "Blood Type: B," "Blood Type: AB," and "Blood Type: O." In each of these
 four new features, we input a 1 in the corresponding column.
-[1.3](#tab:onehot)
+Table [1.3](#tab:onehot)
 shows what this would look like in a tabular dataset.
 
 ```{table} An example of one-hot encoding.
-:label: tab:onehot
 
 | Blood Type | Blood Type: A | Blood Type: B | Blood Type: AB | Blood Type: O |
 |------------|---------------|---------------|-----------------|----------------|
