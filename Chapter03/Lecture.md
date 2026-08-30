@@ -1,4 +1,4 @@
-# Distributions
+#  Lesson 3: Distributions
 ## Learning Questions
 
 -   What is a distribution?
