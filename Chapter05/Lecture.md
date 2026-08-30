@@ -487,7 +487,7 @@ especially for models with many parameters, so mini-batch gradient
 descent, or some variant of it, is very common.
 
 
-[^4]: Any system at $0\text{ K}$ would still have some zero-point
+[^4]: Any system at $T=0{ K}$ would still have some zero-point
     energy, so this statement isn't completely true.
 
 [^5]: Arthur Samuel, a pioneer in machine learning.
