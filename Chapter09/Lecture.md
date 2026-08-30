@@ -1,4 +1,6 @@
-# Learning Questions
+# Lesson 9: Introduction to Neural Networks
+
+## Learning Questions
 
 -   What is a perceptron?
 
