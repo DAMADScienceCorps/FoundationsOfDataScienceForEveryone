@@ -15,6 +15,7 @@ project:
     - title: "Chapter 0: Motivation and Introduction"
       children:
         - file: Chapter00/introduction.md
+        - file: Chapter00/syllabus.md
 
     - title: "Chapter 1: Python 101"
       children:
