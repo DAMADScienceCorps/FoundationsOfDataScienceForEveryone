@@ -1,4 +1,4 @@
-#  Lesson 4: The p-value Framework
+# Lesson 4: The p-value Framework
 
 ## Learning Questions
 
