@@ -1,4 +1,6 @@
-# Learning Questions
+# Lesson 10: Introduction to Generative AI
+
+## Learning Questions
 
 -   What is the difference between an inferential and generative neural
     network?
