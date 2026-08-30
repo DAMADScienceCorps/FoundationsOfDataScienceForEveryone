@@ -109,7 +109,7 @@ We can put all this together now in one beautiful equation:
 
 $$\begin{aligned}
     \mathbf{y} &= \mathbf{X} \boldsymbol{\beta} \\
-    \label{eq:linearmodel2}
+    %\label{eq:linearmodel2}
     \begin{bmatrix}
         y_1 \\
         y_2 \\
