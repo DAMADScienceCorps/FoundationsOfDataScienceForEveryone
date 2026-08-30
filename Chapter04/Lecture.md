@@ -222,7 +222,7 @@ where $f(x)$ is the PDF and $x'$ is a dummy variable for integration.
 ![Two cumulative distribution functions of a Gaussian distribution with
 different mean and standard deviation. See
 [1.3](#fig:gaussian) for the corresponding
-PDFs.](../figures_pedagogy/gaussian_cdf.pdf)
+PDFs.](../figures_pedagogy/gaussian_cdf.pdf.png)
 
 What does the CDF tell us? The CDF evaluated at some point, $x$, is the
 probability that our random process will take on a value that is less
