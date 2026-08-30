@@ -171,6 +171,7 @@ algorithm we define a concept of "density", we also have a concept of
 "isolation" such that this method can also identify *outliers* (or
 *anomalies*) that don't belong to any cluster.
 
+# The algorithm
 DBSCAN classifies points into three categories: **core points**, points
 that have at least `min_samples` points within $\epsilon$ distance;
 **border points**, points that are within $\epsilon$ of a core point but
@@ -187,6 +188,14 @@ to help, but they are beyond the scope of this lesson. DBSCAN is
 powerful because it can find clusters of any shape and is robust to
 outliers, but it struggles when clusters have different densities, and
 it is very sensitive to the choice of epsilon and `min_samples`.
+
+![A visualization of the first step in DBSCAN: identifying a core cluster](../figures_pedagogy/dbscan1.png)
+![A visualization of the first step in DBSCAN: identifying the extent of a cluster](../figures_pedagogy/dbscan2.png)
+![A visualization of the first step in DBSCAN: a second cluster](../figures_pedagogy/dbscan3.png)
+![A visualization of the first step in DBSCAN: identifying outliners](../figures_pedagogy/dbscan4.png)
+
+
+
 
 # Agglomerative Clustering
 
@@ -211,3 +220,68 @@ should be.
     because there may be unstable configurations where points swap back
     and forth from the clusters. What we actually use is "repeat until
     the inertia does not change by more than a chosen threshold".
+
+
+
+The "algorithms" (mathematical rules) for clustering are generally simple enough that they can be written out in a few steps. 
+Here we write them in "pseudo-code". That is: we will write out as a sequence of orders we would give to a computer, but we
+will not follow any specific coding syntax (we are not, for example, respecting `python` syntax rules).
+
+## $k$-means basic algorithm
+```
+Choose N “centers” (random points in the feature space)
+repeat:
+  Calculate distance between each point and each center
+
+  Assign each point to the closest center
+
+  Calculate the new cluster centers
+
+until (convergence):
+  when clusters no longer change
+```
+
+## DBSCAN basic algorithm
+
+notes: 
+```
+for each unvisited point P in dataset D:
+    mark P as visited
+    call all points within distance eps of P (including P) Neighbors_P
+
+    if number of Neighbors_P >= MinPts:
+        create new cluster C
+        add P to cluster C
+
+        for each point Q in Neighbors_P:
+            if Q is unvisited:
+                mark Q as visited
+                call all points within distance eps of Q (including Q) Neighbors_Q
+                if number of Neighbors_Q >= MinPts:
+                    add all points in Neighbors_Q to Neighbors_P
+
+            if Q is not yet assigned to a cluster:
+                add Q to cluster C
+
+mark any point not assigned to a cluster as NOISE
+
+```
+
+## Agglomerative clustering basic algorithm
+
+initially each data point is a singleton cluster (cluster of 1)
+
+```
+Choose linkage criterion (single, complete, average, or Ward)
+Choose K how many clusters you want to end up with
+Compute the distance matrix D between each pair of clusters
+
+repeat
+    find the two clusters with the minimum distance (based on linkage)
+    merge them into a single new cluster
+    update D using all clusters 
+until   
+    only K clusters remains
+```
+
+
