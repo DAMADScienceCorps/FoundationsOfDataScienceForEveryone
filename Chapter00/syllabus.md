@@ -46,7 +46,7 @@ This class is taught and created as part of NSF Award Delaware and Mid-Atlantic 
 Diversity is considered a resource that enriches us culturally and intellectually in this class. No instances of harassment or attempts to marginalize students will be tolerated in my class. Be respectful and collaborate instead of competing. If you have concerns, please come talk to me.
 
 **READ THE FULL CODE OF CONDUCT**  
-FDSFE COC
+
 
 =======
 
@@ -106,45 +106,39 @@ There are several useful textbooks BUT one or even all of them do not replace le
 
 **Lecture notes are available at:** https://github.com/DAMADScienceCorps/FoundationsOfDataScienceForEveryone
 
-### The most helpful textbooks are:
+### Required Learning Materials
+
+The primary materials are the lecture notes, class slides, and lab notebooks. In preparing for the exams, use the homework as a guide to which material is essential. In the Midterm and Final, you will be expected to work individually.
+
+### Helpful Textbooks:
 
 - **Computing and coding:** *Beginning Python Visualization*, 2009 (this book cover basic coding, not only visualizations)
 - **Python Data Science Handbook**, Jake VanderPlas, O'Reilly Media [https://www.oreilly.com/library/view/python-data-science/9781491912126/] — Really specific to the Python Pandas package, but extremely helpful for data science in python
 - **Deep Learning online book:** http://neuralnetworksanddeeplearning.com/
 
-### In addition, depending on your familiarity with coding, statistics, and visualization:
+### More books on visualization:
 
 - *Interactive Data Visualization*, S. Murray, O'Reilly Media
 - *Visualizations: Visualizations Analysis and Design*, T. Munzer, 2014
 
-### Additional resources for Deep Learning (hands on but rapidly out of date):
+### Other Books on Deep Learning (hands on but rapidly out of date):
 
 - *ML in python: Hands-on Machine Learning with Scikit-Learn, Keras, and TensorFlow* (2nd edition)  
   https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/
 
-### Required Learning Materials
-
-The primary materials are the lecture notes, class slides and lab notebooks. In preparing for the exams, use the homework as a guide to which material is essential. In the Midterm and Final, you will be expected to work individually.
-
 ### Technology
 
-**Canvas:** In this class, Canvas, UD's online learning management system, will be used for assignment deadlines and grades. Most of the communication however will happen on Slack.
+**Canvas:** In this class, Canvas will be used for assignment deadlines and grades. Most of the communication however will happen on Slack.
 
-**Zoom:** In this class, Zoom will be used for video conferencing and recording. You will receive a meeting invitation with a specific web link and meeting ID number for use in this class. Zoom is a web-based application that can be used from a computer, tablet, or phone. From a computer, click the class web link and be sure to install the small program that will download to your computer. You only need to install the program once. From a mobile device, download the free Zoom app and type in the class meeting ID number. A microphone and camera are recommended for online meetings. Information on how to test your computer's audio and video can be found on Zoom's website. Learn more info about Zoom at UD.
+**Zoom:** In this class, Zoom will be used for video conferencing and recording.  A microphone and camera are required to interact during class. Learn more info about Zoom at UD.
 
-**Google Collaboratory** will be used for the class. Homework can be developed on any platform as long as the computational setup is consistent for the entire class: the class assistants and I need to be able to reproduce your work and obtain the same results. Modules and libraries used in your work need to be accessible to me, the graders, and your classmates. We may make a docker image and a virtual environment as well and instructions on how to set up your environment to allow you to work offline.
+**Google Collaboratory** will be used for the class. Homework can be developed on any platform but they need to run seamlessly on Colab. The class assistants and I need to be able to reproduce your work and obtain the same results. Modules and libraries used in your work need to be accessible to me, the graders, and your classmates. 
 
 **Homework will be exclusively received through GitHub.** Homework projects must be turned in as iPython notebooks by checking them into your Github account in the DSPS_`<firstinitialLastname>`/HW`<hwnumber>`_`<firstinitialLastname>` repo (unless otherwise stated).
 
 ### Student Hours (aka: Office Hours)
 
 Student hours (also called office hours) are a dedicated time during the week for you to ask questions or engage in discussion about course content with me. See the top of this document for scheduling.
-
-### Additional Learning Resources (mostly at UD)
-
-- **Writing assessments?** — UD Writing Center
-- **Presentation, create a podcast, or other oral assignment?** — Your students can get help from an Oral Communication Consultant (OCC). OCCs provide free one-to-one and group consultations specific to the goals, challenges, and skills necessary for students to be successful with the assignment.
-- **Do you need assistance with note-taking, time management, or study strategies?** — Refer them to the Academic Coaching & Tutoring for one-on-one academic coaching, tutoring, and study skills workshops.
 
 ---
 
@@ -156,9 +150,9 @@ The final course grade will be calculated using the following components:
 
 | Course Component | Percentage of Total |
 |------------------|---------------------|
-| Pre-class questions | 5% |
+| Pre-class questions | 10% |
 | Class performance and participation (get up and code!!) | 25% |
-| Homework | 30% |
+| Homework | 25% |
 | Midterm | 15% |
 | Final | 20% |
 | Adjustments for improvements and mitigation of issues | 5% |
@@ -170,7 +164,8 @@ Please come to class on time: at the beginning of each class, you will be handed
 - the material in the previous classes, and
 - the reading assignments.
 
-Here is an example of a pre-class question form. The first question covers the reading assignment, the second question is part of the material discussed in the previous lecture, the third question is taken from the first assignment. All quiz question will be about earlier topics covered in recent lectures, assignments, or assigned reading.
+Here is an example of a pre-class question form. <img width="492" height="474" alt="Screenshot 2026-08-30 at 12 57 16 AM" src="https://github.com/user-attachments/assets/b365363a-592b-413a-82b5-cfc945feba44" />
+The first question covers the reading assignment, the second question is part of the material discussed in the previous lecture, the third question is taken from the first assignment. All quiz question will be about earlier topics covered in recent lectures, assignments, or assigned reading.
 
 ### Class performance and participation
 
@@ -178,10 +173,11 @@ Each week you will attend two classes, which will be a mix of lectures and hands
 
 ### Homework
 
-
 Weekly assignments will be handed out at the end of the class and will be due strictly before the first class of the following week (no submissions at all can be accepted after that as the homework may be reviewed in class).
 
-Late homework will not be accepted. A single 72-hour exception is allowed throughout the semester, explicitly declare that you are going to use it before the deadline, and do use it wisely. The lowest grade in the first half of the course (before midterm) and the lowest grade in the second half will be disregarded in assigning you a final grade. If you fail to turn in an assignment that will be a 0, and (likely) the lowest grade. This means you will lose the chance to disregard your worst performance.
+Late homework will not be accepted. *A single 72-hour exception is allowed throughout the semester, explicitly declare that you are going to use it before the deadline, and do use it wisely*. 
+
+The lowest grade in the first half of the course (before midterm) and the lowest grade in the second half will be disregarded in assigning you a final grade. If you fail to turn in an assignment that will be a 0, and (likely) the lowest grade. This means you will lose the chance to disregard your worst performance.
 
 I encourage you to work in groups of up to 3 people, but as a collaborative project. Individual notebooks must be uploaded to your own github repository for each homework. Different group members should lead different aspects of the work. A statement must be included in the README of the repository explaining each team member's contribution (similar to an acknowledgment of contribution you would find in a Nature letter see, for example, these contributions).
 
@@ -195,7 +191,7 @@ The final will be a take home exam but a short (15 min) live session will be sch
 
 ### Additionally
 
-There will be opportunities for extra credit projects to improve your grade after the first half of the semester (grade counting toward participation). There are often extra credit tasks in regular homework that are counted the same way.
+There may be opportunities for extra credit projects to improve your grade after the first half of the semester (grade counting toward participation). There are often extra credit tasks in regular homework that are counted the same way.
 
 ### Grading Scale
 
@@ -268,6 +264,7 @@ Attendance is expected and mandatory. Participation in class requires:
 - Being present and engaged
 - Participating in collaborative coding
 - Contributing to group work
+- Cameras should be on
 
 If you need to miss the class, let me know on Slack and if possible arrange to attend remotely. If you do not attend and there is a class recording, you MUST watch the recording.
 
