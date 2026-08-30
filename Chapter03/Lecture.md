@@ -1,4 +1,5 @@
-# Learning Questions
+# Distributions
+## Learning Questions
 
 -   What is a distribution?
 
