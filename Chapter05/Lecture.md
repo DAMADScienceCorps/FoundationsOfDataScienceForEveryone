@@ -332,12 +332,18 @@ model on it and find the metrics have plummeted. What happened?
 Your model learned the data it trained on, including its noise and
 quirks. It did not learn the underlying pattern. This is called
 **overfitting;** the model was not generalizable. To honestly assess
-generalizability, you must split your dataset into three non-overlapping
-subsets. The **training set**, **validation set** and **test set.**
+generalizability, you must split your dataset into at least two non-overlapping sets: a 
+**training set**, and a **test set**.
+
+![Train test split visualization](../figures_pedagogy/traintest.png)
 
 The training set is where the model learns its parameters. For example,
 if you were to use the OLS method to find the parameters of a linear
 model, you would calculate $\bar{y}$ and $\bar{x}$ on this training set.
+
+A much better practice, tho, is to split it into 
+_three_ non-overlapping
+subsets. The **training set**, **validation set** and **test set.**
 The validation set is used to tune hyperparameters. You evaluate
 performance here repeatedly, though you don't train on it. Perhaps you
 want to know what the effect of changing the objective function would
@@ -347,6 +353,21 @@ project. When you write your research paper on your cool new model, in
 the results z you will include the performance of the model on this test
 set. You never use the test set to inform any model parameters or
 hyperparameters.
+
+![Train validation test split visualization](../figures_pedagogy/traintestvalsplit.png)
+
+Yet we can do better. The characteristics of the specific subset we left out for validating may influence our result. 
+What if we validated on each piece of the data, leaving out a small portion for testing? This is called $k$-fold validation, where $k$ is the number of folds. 
+Say you split your data into 4 subsets, 3 are used for training and one for validation at each fold, but you alternate which one is used for validation. 
+Then you need to aggregate the results in some way; e.g. you can take the mean of the value returned by the model tuned for each ``fold'' as your prediction.
+
+![4-fold validation visualization](../figures_pedagogy/kfold.png)
+
+
+And the best practice is to do this and also leave out a small portion of the data for testing, on which you will run your aggregate model to
+ report the result.
+ 
+![4-fold validation with hold out set visualization](../figures_pedagogy/kfoldholdout.png)
 
 ## Overfitting and Underfitting
 
