@@ -112,7 +112,7 @@ average, but also the students mostly scored around $85\%$.
 
 ![Two examples of a Gaussian probability distribution function with
 different means and standard
-deviations.](../figures_pedagogy/gaussian_pdf.pdf)
+deviations.](../figures_pedagogy/gaussian_pdf.pdf.png)
 
 There are a few things to note about the Gaussian distribution and our
 particular choice of example. First, our example has limited support.
@@ -204,7 +204,7 @@ written above.
 ![A standard normal distribution ($\mu=0$, $\sigma=1$). Each standard
 deviation is marked with vertical dashed lines and the percentage of the
 area under the curve in each region is
-annotated.](../figures_pedagogy/stddevs.pdf)
+annotated.](../figures_pedagogy/stddevs.pdf.png)
 
 Remember our test example? We said that $\mu=85\%$ and $\sigma=5\%$.
 Using this chart --- *and assuming that the test scores are indeed
