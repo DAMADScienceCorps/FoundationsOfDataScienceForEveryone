@@ -167,7 +167,7 @@ $y = mx + b$.
 
 ![A collection of data points spread out in a rough line is approximated
 by a linear model. In this case, the parameters of the model are $m=1$
-and $b=0$.](../figures_pedagogy/linearmodel.png)
+and $b=0$.](../figures_pedagogy/linearmodel.pdf.ng)
 
 **Step 2:** Optimize an **objective function** (also called a loss
 function) that quantifies how well the model fits the data. Consider the
@@ -450,7 +450,7 @@ we should decrease our parameter to move in the opposite direction of
 the gradient. Let's try $x=-2$. The gradient is $f'(x=-2)=-4$, negative,
 which means we should increase our parameter.
 
-![4-fold validation visualization](../figures_pedagogy/gradient_descent_.png)
+![gradient descent 1d visualization](../figures_pedagogy/gradient_descent_1d.png)
 
 
 Once we have the gradient, we know whether to increase or decrease our
