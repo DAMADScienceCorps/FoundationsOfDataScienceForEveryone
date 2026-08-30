@@ -451,6 +451,21 @@ we should decrease our parameter to move in the opposite direction of
 the gradient. Let's try $x=-2$. The gradient is $f'(x=-2)=-4$, negative,
 which means we should increase our parameter.
 
+In a 2D parameter space ($f(x,y)$), can visualize your objective function as a topology or landscape.
+You are starting in some (random) poisition on the landscape, there are peaks and valleys, 
+and you want to get to the lowest elevation point without getting trapped in a valley.
+
+![4-fold validation visualization](../figures_pedagogy/gradient_descent_3d.png)
+
+The gradient descent designs a path for you to get from your starting point to the lowest elevation,
+generally speaking by deciding at each position in which direction to take the next step so that it is downhill 
+(but careful! if you were to literally do this you could end up stuck in a valley! we will solve this in a minute 
+with stochastic gradient descent)
+
+![4-fold validation visualization](../figures_pedagogy/gradient_descent_path.png)
+
+
+
 Once we have the gradient, we know whether to increase or decrease our
 parameters, but by how much? This **step size** is controlled by the
 **learning rate** hyperparameter. A small learning rate means you make
